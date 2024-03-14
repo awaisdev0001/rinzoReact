@@ -1,0 +1,60 @@
+@import "src/assets/styles/mixins";
+
+.graph__component {
+  padding: 3.8rem 2.4rem;
+  box-shadow: 0 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  border: 1px solid var(--base-border);
+  margin-bottom: 5.1rem;
+  height: fit-content;
+
+  @include mobile() {
+    border: none;
+    box-shadow: none;
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 1.6rem;
+    background: var(--base-background--09);
+    border-radius: 16px;
+    margin-bottom: 1.8rem;
+    margin-top: 3px;
+    width: 100%;
+
+    @include tablet() {
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
+      border-radius: 0;
+      padding: 16px 16px 18px;
+    }
+
+    &__checkboxes {
+      display: flex;
+      align-items: center;
+
+      @include tabletMini() {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      &__checkbox {
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__mobile__timeline {
+    margin: 18px 0;
+    max-width: 340px;
+
+    @include mobile() {
+      max-width: 100%;
+    }
+  }
+}

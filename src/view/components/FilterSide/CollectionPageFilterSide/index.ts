@@ -1,0 +1,1 @@
+export { CollectionPageFilterSide } from './CollectionPageFilterSide';

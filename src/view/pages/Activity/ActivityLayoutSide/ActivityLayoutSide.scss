@@ -1,0 +1,24 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.action-line {
+  @include mobile() {
+    &__result.desktop {
+      display: none;
+    }
+
+    &__view.desktop {
+      display: none;
+    }
+  }
+
+  &-top-mobile {
+    display: none;
+    @include mobile() {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

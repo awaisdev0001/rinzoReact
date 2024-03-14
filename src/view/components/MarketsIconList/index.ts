@@ -1,0 +1,1 @@
+export { MarketsIconList } from './MarketsIconList';

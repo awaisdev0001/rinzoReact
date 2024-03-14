@@ -1,0 +1,1 @@
+export { IconBigGrayArrowDown } from './IconBigGrayArrowDown';

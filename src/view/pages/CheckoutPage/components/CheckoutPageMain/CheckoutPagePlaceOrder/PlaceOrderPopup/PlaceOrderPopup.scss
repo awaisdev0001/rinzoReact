@@ -1,0 +1,104 @@
+@import "src/assets/styles/variables";
+
+.place__order__popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.333;
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    color: var(--text-primary);
+  }
+
+  &__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    text-align: center;
+    color: var(--text-secondary);
+
+    span{
+      color: var(--text-primary);
+      margin-left: 5px;
+      font-size: 1.6rem;
+      line-height: 1.375;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    text-align: center;
+    margin-top: 16px;
+    color: var(--text-primary);
+
+    svg{
+      margin-right: 9px;
+      fill: var(--icons-inactive);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.4rem;
+
+    &__main {
+      border: 1px solid var(--text-primary);
+      border-radius: 8px;
+      width: 100%;
+      padding: 12px 0;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.571;
+      text-align: center;
+      margin-bottom: 1.6rem;
+      color: var(--text-primary);
+
+      &:hover{
+        color: var(--primary-green);
+        border-color: var(--primary-green);
+
+        svg{
+          fill: var(--primary-green);
+        }
+      }
+
+      svg {
+        fill: var(--text-primary);
+      }
+    }
+
+    &-link{
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.375;
+      text-align: center;
+      color: var(--primary-green);
+      cursor: pointer;
+
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "src/assets/styles/mixins";
+
+.place__order__item {
+  z-index: 2;
+  &__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    color: var(--text-secondary);
+    margin-left: 1.3rem;
+    white-space: nowrap;
+
+    @include miniMobile() {
+      font-size: 1.4rem;
+    }
+
+    &-inner {
+      padding-left: 2.1rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      margin-top: 14px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.286;
+
+      @include mobile {
+        font-size: 1.2rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

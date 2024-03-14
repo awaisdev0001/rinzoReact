@@ -1,0 +1,48 @@
+@import "src/assets/styles/variables";
+.sweep__modal__collections__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--base-border);
+  padding-bottom: 8px;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  &-imageTitle {
+    display: flex;
+    align-items: center;
+
+    .sweep__modal__collections__row-img {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      margin-right: 8px;
+    }
+
+    .sweep__modal__collections__row-title {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--text-primary);
+    }
+  }
+
+  &-collectionNumber {
+    display: flex;
+
+    &-par {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--text-primary);
+    }
+  }
+}

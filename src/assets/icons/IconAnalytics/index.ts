@@ -1,0 +1,1 @@
+export { IconAnalytics } from './IconAnalytics';

@@ -1,0 +1,31 @@
+@import "src/assets/styles/mixins";
+
+.range__slider-costume {
+  padding: 10px 0 !important;
+  .MuiSlider-thumb {
+    background-color: var(--primary-green);
+    @include tablet() {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.Mui-active {
+      box-shadow: none !important;
+    }
+  }
+  .MuiSlider-rail {
+    background: var(--fields-disable);
+  }
+  .MuiSlider-track {
+    background: var(--primary-medium-green);
+    border: none !important;
+  }
+  &.range__slider-gold {
+    .MuiSlider-thumb {
+      background: var(--alerts-gold);
+    }
+    .MuiSlider-track {
+      background: var(--alerts-orange);
+    }
+  }
+}

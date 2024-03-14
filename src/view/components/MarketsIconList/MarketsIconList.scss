@@ -1,0 +1,24 @@
+@import "src/assets/styles/mixins";
+.markets-icons {
+  padding-left: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 50px;
+  img {
+    width: 26px;
+    height: auto;
+    margin-left: -8px;
+  }
+  &--small {
+    padding-left: 4px;
+    @include mobile() {
+      min-width: 0;
+    }
+    img {
+      width: 16px;
+      min-width: 16px;
+      margin-left: -4px;
+    }
+  }
+}

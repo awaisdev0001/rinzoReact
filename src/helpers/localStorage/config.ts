@@ -1,0 +1,1 @@
+export const AppId = "RINZO_APP";

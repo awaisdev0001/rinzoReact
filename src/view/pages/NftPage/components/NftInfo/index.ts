@@ -1,0 +1,1 @@
+export { NftInfo } from './NftInfo';

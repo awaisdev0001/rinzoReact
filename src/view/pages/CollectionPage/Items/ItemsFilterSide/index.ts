@@ -1,0 +1,1 @@
+export { ItemsFilterSide } from './ItemsFilterSide';

@@ -1,0 +1,95 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.review__page__upper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 40px;
+  @include tablet() {
+    margin-top: 16px;
+  }
+
+  &__back {
+    display: flex;
+    margin-right: 16px;
+    @include tablet() {
+      margin-right: 0;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--fields-disable);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+
+      svg {
+        width: 20px;
+      }
+
+      @include tablet() {
+        width: 32px;
+        height: 32px;
+        svg {
+          width: 16px;
+        }
+      }
+
+      @include mobile() {
+      }
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet() {
+      width: 100%;
+      align-items: center;
+      padding-right: 32px;
+    }
+    @include mobile() {
+      align-items: center;
+    }
+
+    &-title {
+      font-family: $titleFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 1.25;
+      color: var(--text-primary);
+
+      @include tabletMini() {
+        font-size: 2.5rem;
+        line-height: 1.85;
+      }
+
+      @include mobile() {
+        font-size: 2.4rem;
+        line-height: 1.45;
+      }
+    }
+
+    &-par {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 2.175;
+      color: var(--text-secondary);
+
+      @include mobile() {
+        line-height: 1.175;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 8px;
+        width: calc(100% + 60px);
+        margin-left: 0;
+      }
+    }
+  }
+}

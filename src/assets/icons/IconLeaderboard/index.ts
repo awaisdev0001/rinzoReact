@@ -1,0 +1,1 @@
+export { IconLeaderboard } from './IconLeaderboard';

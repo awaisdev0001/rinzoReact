@@ -1,0 +1,25 @@
+@import "src/assets/styles/mixins";
+
+.container {
+  .action-line__filter-mobile {
+    display: none;
+  }
+  @include middleTablet {
+    padding: 0;
+
+    .action-line__filter {
+      display: none;
+    }
+
+    .action-line__filter-mobile {
+      display: block;
+      order: 2;
+    }
+  }
+
+  // @include tablet {
+  //   .action-line__result {
+  //     opacity: 0;
+  //   }
+  // }
+}

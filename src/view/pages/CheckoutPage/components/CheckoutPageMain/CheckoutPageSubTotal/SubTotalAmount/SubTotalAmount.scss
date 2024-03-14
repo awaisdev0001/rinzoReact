@@ -1,0 +1,87 @@
+@import 'src/assets/styles/variables';
+@import "src/assets/styles/mixins";
+
+.subtotal__cart__amount {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+
+  &-title {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--text-primary);
+  }
+
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 15px;
+
+    @include mobile(){
+      flex-direction: column;
+    }
+
+    &-input {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      border: 1px solid var(--base-border);
+      padding: 16px 12px;
+      border-radius: 8px;
+
+      .amount__input{
+        border: none;
+        outline: none;
+        height: 100%;
+
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.285;
+        color: var(--text-secondary);
+      }
+
+      .amount__input__max{
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 16px;
+        color:var(--text-secondary);
+      }
+    }
+
+    &-btn {
+      flex: 1;
+      background: var(--fields-disable);
+      border-radius: 8px;
+      height: 50px;
+      padding: 14px 0;
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.571;
+      text-align: center;
+      color: var(--text-disable);
+      cursor: pointer;
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+
+    .btn-active {
+      color: (--text-white);
+      background: var(--primary-green);
+    }
+
+  }
+
+
+}

@@ -1,0 +1,121 @@
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  cursor: pointer;
+  padding: 8px 0;
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &--dark {
+      background: var(--main-element-bg);
+    }
+    &--open {
+      opacity: 1;
+    }
+
+    span {
+      color: var(--text-white);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.33;
+      white-space: nowrap;
+    }
+    &.capitalize {
+      span {
+        text-transform: capitalize;
+      }
+    }
+    &_arrow {
+      position: absolute;
+      bottom: 1px;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 5px solid var(--text-secondary);
+      &--dark {
+        border-top-color: var(--main-element-bg);
+      }
+    }
+  }
+  .tooltip-list {
+    padding: 4px 0;
+    min-width: 118px;
+    &__title {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.33;
+      color: var(--text-white);
+      margin-bottom: 8px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &_link {
+        min-width: 85px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 1.33;
+        color: var(--text-white);
+        &:hover {
+          color: var(--text-accent);
+        }
+        img {
+          width: 16px;
+          height: auto;
+          margin-right: 8px;
+        }
+      }
+      &_right {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+      }
+      &_addition {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 2px 0 0;
+      }
+      &_data {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.33;
+        color: var(--text-white);
+        text-align: right;
+      }
+    }
+  }
+  &.bottom {
+    &-mobile {
+      .tooltip {
+        &__content {
+          top: initial;
+          bottom: 0;
+          transform: translate(-50%, 100%);
+          &_arrow {
+            top: 1px;
+            transform: translate(-50%, -100%) rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.base-tag {
+  padding: 4px 24px;
+  border: 1px solid var(--fields-inactive);
+  border-radius: 20px;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--base-green-background);
+    border-color: var(--fields-inactive);
+  }
+}

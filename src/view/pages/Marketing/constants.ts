@@ -1,0 +1,9 @@
+export const feeStructure = 'feeStructure';
+export const machineLearning = 'machineLearning';
+export const portfolioInsights = 'portfolioInsights';
+export const rarityTracking = 'rarityTracking';
+export const leaderboards = 'leaderboards';
+export const marketInsights = 'marketInsights';
+export const bulkActions = 'bulkActions';
+export const aggregation = 'aggregation';
+export const fees = 'fees';

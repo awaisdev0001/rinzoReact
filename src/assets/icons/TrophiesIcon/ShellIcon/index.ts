@@ -1,0 +1,1 @@
+export { ShellIcon } from './ShellIcon';

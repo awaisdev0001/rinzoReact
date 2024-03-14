@@ -1,0 +1,1 @@
+export { IconRedirect } from './IconRedirect';

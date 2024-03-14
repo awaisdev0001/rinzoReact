@@ -1,0 +1,1 @@
+export { MarketingMenu } from './MarketingMenu';

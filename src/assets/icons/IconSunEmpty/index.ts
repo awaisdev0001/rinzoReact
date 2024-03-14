@@ -1,0 +1,1 @@
+export { IconSunEmpty } from './IconSunEmpty';

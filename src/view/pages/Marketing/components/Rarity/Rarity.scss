@@ -1,0 +1,237 @@
+@import "src/assets/styles/mixins";
+.rarity {
+  padding-top: 24px;
+  @include tablet() {
+    padding-top: 0;
+  }
+  &__blocks {
+    display: flex;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    @include tablet() {
+      width: calc(100% + 28px);
+      margin-left: -14px;
+    }
+    @include mobile() {
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0;
+    }
+    &_item {
+      width: calc((100% - 62px) / 2);
+      margin: 0 16px 33px;
+      @include tablet() {
+        width: calc((100% - 56px) / 2);
+        margin: 0 14px 28px;
+      }
+      @include mobile() {
+        width: 100%;
+        margin: 0 0 28px;
+      }
+      &--small {
+        @include mobile() {
+          margin: 0 0 20px;
+        }
+      }
+    }
+  }
+  &-block {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #efeff4;
+    background: #f8fffb;
+    overflow: hidden;
+    &__header {
+      display: flex;
+      align-items: center;
+      padding: 40px 48px;
+      @include tablet() {
+        padding: 28px 20px 40px;
+      }
+      &_image {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        background-size: cover;
+        margin-right: 16px;
+      }
+      &_title {
+        color: #222222;
+      }
+    }
+    &__list {
+      padding: 0 48px 40px;
+
+      @include notMobile() {
+        height: 210px;
+      }
+
+      @include tablet() {
+        padding: 0 20px 28px;
+      }
+      &_item {
+        position: relative;
+        padding: 0 0 0 16px;
+        font-size: 14px;
+        line-height: 1.285;
+        color: #222222;
+        margin-bottom: 40px;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content: "";
+          height: 4px;
+          width: 4px;
+          background: #adca5c;
+          border-radius: 50%;
+        }
+        &::after {
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #d0d5dd;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fffb;
+      height: 72px;
+      border-top: 2px solid #efeff4;
+      padding: 0 48px;
+      background-size: cover;
+      @include tablet() {
+        height: 64px;
+        padding: 0 39px;
+      }
+      @include mobile() {
+        padding: 0 34px;
+      }
+      &--big {
+        margin-top: 18px;
+        @include mobile() {
+          margin-top: 0;
+        }
+      }
+      &_item {
+        display: flex;
+        align-items: center;
+        width: calc((100% - 24px) / 2);
+        @include tablet() {
+          width: calc((100% - 40px) / 2);
+        }
+        &-image {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          min-width: 24px;
+          min-height: 24px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin-right: 9px;
+        }
+        &-title {
+          font-size: 12px;
+          line-height: 1.33;
+          color: #222222;
+        }
+      }
+    }
+    &--sponsors {
+      background: #ffffff;
+      .rarity-block {
+        &__list::before {
+          background: #ff7676;
+        }
+        &__footer {
+          background: #fef3f2;
+        }
+      }
+    }
+  }
+  &-info {
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #efeff4;
+    border-radius: 16px;
+    &--green {
+      border-color: #adca5c;
+    }
+    &__image {
+      position: relative;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 398px;
+      @include tablet() {
+        height: 312px;
+      }
+      &_logo {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        display: inline-block;
+        width: 48px;
+        height: 248x;
+        min-width: 48px;
+        min-height: 48px;
+        background-size: cover;
+      }
+    }
+    &__list {
+      padding: 24px 12px 0;
+      &_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        p {
+          font-size: 14px;
+          line-height: 1.285;
+          color: #667085;
+          &.rarity-info__list_item-right {
+            display: flex;
+            font-weight: 700;
+            color: #222222;
+            &--light {
+              font-weight: 400;
+              color: #667085;
+            }
+            span {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              width: 18px;
+              height: 18px;
+              margin-right: 4px;
+              svg {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

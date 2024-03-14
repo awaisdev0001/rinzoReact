@@ -1,0 +1,1 @@
+export { IconBlueDiamond } from './IconBlueDiamond';

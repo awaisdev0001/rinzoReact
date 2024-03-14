@@ -1,0 +1,259 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.checkout__page__my_cart {
+  border: 1px solid var(--base-border);
+  box-shadow: 0 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem;
+  padding: 1.3rem 1.6rem;
+  width: 58rem;
+  height: fit-content;
+  background: var(--base-background--08);
+
+  @include middleTablet() {
+    width: 100%;
+    margin-bottom: 2.8rem;
+  }
+
+  @include mobile() {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px 16px;
+
+    @include tabletMini() {
+      border-spacing: 0 16px;
+    }
+
+    &-head {
+      &-tr {
+        .my__cart__middle__head {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.333;
+          display: flex;
+          align-items: center;
+          color: var(--text-primary);
+          white-space: nowrap;
+
+          &-icon {
+            margin-left: 4px;
+            width: 1.6rem;
+            height: 1.6rem;
+
+            path:not(.black) {
+              fill: var(--text-disable);
+            }
+          }
+        }
+
+        th {
+          padding: 0.5rem;
+          text-align: left;
+
+          &:first-child {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 1.333;
+            color: var(--text-primary);
+          }
+
+          &:last-child {
+            text-align: right;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.285;
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+
+    &-body {
+      tr {
+        margin-bottom: 1.6rem;
+        td {
+          padding: 0.5rem;
+          text-align: left;
+          vertical-align: middle;
+
+          &:first-child {
+            display: flex;
+            align-items: center;
+
+            .my__cart__nft-thumb {
+              width: 5.2rem;
+              height: 5.2rem;
+              margin-right: 8px;
+            }
+
+            .my__cart__nft__info {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              &__number {
+                font-family: $primaryFont;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.285;
+                color: var(--text-primary);
+
+                @include mobile() {
+                }
+              }
+
+              &__title {
+                font-family: $primaryFont;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.333;
+                color: var(--text-secondary);
+
+                @include mobile() {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  width: 6.9rem;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            text-align: right;
+
+            .my__cart__nft__price {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 1.9rem;
+              line-height: 1.375;
+              color: var(--text-primary);
+
+              span {
+                margin-left: 8px;
+              }
+
+              @include miniMobile() {
+                //display: flex;
+                //align-items: center;
+              }
+            }
+
+            .my__cart__nft__price_dollars {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: 1.333;
+              text-align: right;
+              color: var(--text-tertiary);
+            }
+          }
+        }
+
+        .my__cart__middle__body {
+          width: 6.9rem;
+          background: var(--main-element-bg);
+          padding: 10px 12px;
+          border: 1px solid var(--fields-inactive);
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          cursor: text;
+          &:focus {
+            border-color: var(--text-accent);
+          }
+
+          &:hover {
+            border-color: var(--text-accent);
+          }
+
+          &__input {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.333;
+            color: var(--text-secondary);
+            border: none;
+            outline: none;
+            width: 50%;
+
+            &::placeholder {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: 1.333;
+              color: var(--text-secondary);
+            }
+          }
+
+          span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.333;
+            color: var(--text-secondary);
+          }
+        }
+
+        .my__cart__middle__body-disable {
+          width: 6.9rem;
+          background: var(--fields-disable);
+          padding: 10px 12px;
+          border: 1px solid var(--fields-inactive);
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          cursor: not-allowed;
+          &:focus {
+            border-color: var(--text-accent);
+          }
+
+          &:hover {
+            border-color: var(--text-accent);
+          }
+
+          &__input {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.333;
+            color: var(--text-disable);
+            border: none;
+            outline: none;
+            width: 50%;
+            cursor: not-allowed;
+
+            &::placeholder {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: 1.333;
+              color: var(--text-secondary);
+            }
+          }
+
+          span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.333;
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+  }
+}

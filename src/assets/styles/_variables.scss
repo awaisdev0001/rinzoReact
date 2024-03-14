@@ -1,0 +1,177 @@
+//fonts
+$primaryFont: "Inter", sans-serif;
+$titleFont: "Archivo";
+$logoFont: "BreakTheCode";
+$numberFont: "Agency";
+//colors
+
+:root {
+  --primary-green: #adca5c;
+  --primary-medium-green: #d6e892;
+  --primary-red: #ff7676;
+
+  --base-background--00: #fbfbfd;
+  --base-background--01: #ffffff;
+  --base-background--02: #fbfbfd;
+  --base-background--08: #ffffff;
+  --base-background--09: #fbfbfd;
+  --base-green-background: #f4f8e8;
+  --base-green-background-dropdown-list: #8eb136;
+  --base-border: #efeff4;
+  --base-black: #444444;
+  --base-border-black: rgba(68, 68, 68, 0.4);
+  --active-filter-tab: #8eb136;
+
+  --fields-inactive: #d0d5dd;
+  --icons-inactive: #d0d5dd;
+  --icons-active: #667085;
+  --fields-disable: #f0f3f7;
+  --main-element-bg: #ffffff;
+
+  --text-primary: #222222;
+  --text-secondary: #667085;
+  --text-tertiary: #8d98af;
+  --text-disable: #9ea9c1;
+  --text-white: #ffffff;
+  --text-accent: #8eb136;
+  --black-btn: #ffffff;
+
+  --alerts-honeydew: #ecfdf3;
+  --alerts-lace: #fffaeb;
+  --alerts-orange: #fdb022;
+  --alerts-gold: #cc8406;
+  --alerts-pink: #fef3f2;
+  --alerts-main-pink: #ff7676;
+  --alerts-sky: #eef4ff;
+  --alerts-sky-blue: #4891f0;
+  --alerts-blue: #443df6;
+  --alerts-green: #234100;
+
+  --simple-black: #000000;
+  --medium-green-button: #d6e892;
+
+  --items-card-estimated: #f4f8e8;
+
+  --tip-rinzo: #252629;
+  --input-color: #8d98af;
+  
+  --placeholder-gray: #eee;
+  --placeholder-dark: #ddd;
+}
+
+/* 2 */
+[data-theme="dark"] {
+  --primary-green: #cfe0a0;
+  --primary-medium-green: #e6f1bd;
+  --primary-red: #e89092;
+
+  --base-background--00: #121212; // footer
+  --base-background--01: #181818; // site background
+  --base-background--02: #232323; // filter sidebar
+  --base-background--08: #1e1e1e; // top-nav
+  --base-background--09: #232323; // menus
+  --base-green-background: #8eb136;
+  --base-green-background-dropdown-list: #8eb136;
+  --base-border: #404040; // border on nfts/cards
+  --base-black: #e1e1e2;
+  --base-border-black: #5d5d60;
+  --active-filter-tab: #8eb136;
+
+  --fields-inactive: #a3a3a5;
+  --icons-inactive: #a3a3a5;
+  --icons-active: #e1e1e2;
+  --fields-disable: #404040; // background for timing
+  --main-element-bg: #282828; // search bars + active element on times
+
+  --text-primary: #ffffff;
+  --text-secondary: #e3e3e4;
+  --text-tertiary: #a9a9ab;
+  --text-disable: #a5a5a5;
+  --text-white: #ffffff;
+  --text-accent: #8eb136;
+  --black-btn: #18191d;
+
+  --alerts-honeydew: #ecfdf3;
+  --alerts-lace: #fffaeb;
+  --alerts-orange: #ffc637;
+  --alerts-gold: #cc8406;
+  --alerts-pink: #fceae6;
+  --alerts-main-pink: #e89092;
+  --alerts-sky: #d2e3ff;
+  --alerts-sky-blue: #4891f0;
+  --alerts-blue: #7a7fff;
+  --alerts-green: #e3e3e4;
+
+  --simple-black: #ffffff;
+
+  --items-card-estimated: #cfe0a0;
+  --medium-green-button: #3d3e41;
+
+  --tip-rinzo: #444444;
+  --input-color: #e3e3e4;
+  
+  --placeholder-gray: #444;
+  --placeholder-dark: #333;
+}
+
+// Media queries
+$xxxl: 1920px;
+$xxl: 1499px;
+$xl: 1399px;
+$l: 1299px;
+$m: 1199px;
+$s: 1024px;
+$xs: 767px;
+$xxs: 599px;
+$xxxs: 375px;
+
+/* OLD DARKS
+   --primary-green: #cfe0a0;
+  --primary-medium-green: #e6f1bd;
+  --primary-red: #e89092;
+
+  --base-background--00: #18191d;
+  --base-background--01: #242528;
+  --base-background--02: #28292d;
+  --base-background--08: #343538;
+  --base-background--09: #343538;
+  --base-green-background: #8eb136;
+  --base-green-background-dropdown-list: #8eb136;
+  --base-border: #5d5d60;
+  --base-black: #e1e1e2;
+  --base-border-black: #5d5d60;
+  --active-filter-tab: #8eb136;
+
+  --fields-inactive: #a3a3a5;
+  --icons-inactive: #a3a3a5;
+  --icons-active: #e1e1e2;
+  --fields-disable: #5d5d60;
+  --main-element-bg: #3d3e41;
+
+  --text-primary: #ffffff;
+  --text-secondary: #e3e3e4;
+  --text-tertiary: #a9a9ab;
+  --text-disable: #a5a5a5;
+  --text-white: #ffffff;
+  --text-accent: #8eb136;
+  --black-btn: #18191d;
+
+  --alerts-honeydew: #ecfdf3;
+  --alerts-lace: #fffaeb;
+  --alerts-orange: #ffc637;
+  --alerts-gold: #cc8406;
+  --alerts-pink: #fceae6;
+  --alerts-main-pink: #e89092;
+  --alerts-sky: #d2e3ff;
+  --alerts-sky-blue: #4891f0;
+  --alerts-blue: #7a7fff;
+  --alerts-green: #e3e3e4;
+
+  --simple-black: #ffffff;
+
+  --items-card-estimated: #cfe0a0;
+  --medium-green-button: #3d3e41;
+
+  --tip-rinzo: #444444;
+  --input-color: #e3e3e4;
+  */

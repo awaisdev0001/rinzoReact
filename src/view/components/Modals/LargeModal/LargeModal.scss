@@ -1,0 +1,36 @@
+@import "src/assets/styles/_variables";
+
+.large__modal {
+  &-content {
+    background-color: var(--base-background--00);
+    border-radius: 16px;
+    padding: 4rem;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 11px;
+
+      h2 {
+        color: var(--text-primary);
+      }
+    }
+
+    &__body {
+      &-description {
+        margin-bottom: 3.2rem;
+        color: var(--text-secondary);
+
+        a {
+          color: var(--text-primary);
+          font-weight: 700;
+
+          &:hover {
+            color: var(--text-accent);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "src/assets/styles/_variables";
+@import "src/assets/styles/mixins";
+
+.filter-line {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 2px;
+  background: var(--fields-disable);
+  border-radius: 8px;
+  @include tablet() {
+    justify-content: space-between;
+  }
+  &__bg {
+    min-width: 50px;
+    position: absolute;
+    top: 2px;
+    height: calc(100% - 4px);
+    width: 30px;
+    border-radius: 8px;
+    z-index: 1;
+    background: var(--base-black);
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  &__item {
+    min-width: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 11px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    white-space: nowrap;
+    box-sizing: border-box;
+    z-index: 2;
+    cursor: pointer;
+    @include tablet() {
+      //min-width: calc(100% / 6);
+      padding: 9px 11px;
+    }
+    &:hover {
+      color: var(--text-primary);
+    }
+    &--active {
+      color: var(--text-white);
+      &:hover {
+        border-color: transparent;
+        color: var(--text-white);
+      }
+    }
+  }
+  &--s {
+    width: auto;
+    .filter-line {
+      &__item {
+        min-width: 56px;
+        @include tablet() {
+          padding: 7px 11px;
+        }
+      }
+      &__bg {
+        min-width: 56px;
+      }
+    }
+  }
+  &--xs {
+    .filter-line {
+      &__item {
+        @include mobile() {
+          padding: 7px 7.25px;
+        }
+      }
+    }
+  }
+  &--small-item {
+    .filter-line {
+      &__bg,
+      &__item {
+        min-width: 40px;
+      }
+    }
+  }
+  &--dark {
+    .filter-line__bg {
+      background: var(--main-element-bg);
+    }
+  }
+  &.dark {
+    width: auto;
+    background: var(--base-black);
+    border: 1px solid var(--text-accent);
+    @include tablet() {
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding-bottom: 0;
+    }
+    .filter-line {
+      &__item {
+        color: var(--base-background--01);
+        @include tablet() {
+          padding: 7px 11px;
+        }
+        &--active {
+          color: var(--base-background--01);
+        }
+      }
+      &__bg {
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.12)
+          ),
+          #121212;
+        @include tablet() {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          height: calc(100% - 2px);
+        }
+      }
+    }
+    &.filter-line--dark {
+      background: var(--base-background--08);
+      .filter-line__item {
+        color: var(--text-primary);
+      }
+      .filter-line__bg {
+        background: var(--main-element-bg);
+      }
+    }
+  }
+}

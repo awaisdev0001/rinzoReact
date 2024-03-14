@@ -1,0 +1,143 @@
+@import "src/assets/styles/mixins";
+.achievements-block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 580px;
+  padding: 24px 24px 12px;
+  background-color: var(--base-background--08);
+  border: 1px solid var(--base-border);
+  box-shadow: 0px 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  margin-left: 15px;
+  @include tablet() {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 360px;
+  }
+  @include mobile() {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 24px 21px 12px 24px;
+  }
+  &__info {
+    margin-right: 6rem;
+    @include tablet() {
+      margin-right: 0;
+    }
+    &_title {
+      font-size: 18px;
+      line-height: 1.44;
+      font-weight: 700;
+      color: var(--text-accent);
+      margin-bottom: 8px;
+    }
+    &_button {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.285;
+      color: var(--text-primary);
+      margin-bottom: 5px;
+      @include tablet() {
+        margin-bottom: 20px;
+      }
+      &:hover {
+        color: var((--text-accent));
+      }
+    }
+  }
+  &__trophies {
+    @include tablet() {
+      display: flex;
+      &_item {
+        margin-right: 16px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.achievement-popup {
+  margin-top: -40px;
+  @include mobile() {
+    margin-top: -24px;
+  }
+  &__content {
+    &_image {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 24px;
+      @include mobile() {
+        width: 160px;
+        height: 160px;
+      }
+      &-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--medium-green-button);
+        color: var(--text-primary);
+      }
+    }
+    &_title {
+      color: var(--text-primary);
+      text-align: center;
+      margin-bottom: 8px;
+      @include mobile() {
+        font-size: 32px;
+        padding: 0 16px;
+        margin-bottom: 7px;
+      }
+    }
+    &_subtitle {
+      font-size: 18px;
+      line-height: 1.44;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-bottom: 24px;
+      @include mobile() {
+        padding: 0 16px;
+        margin-bottom: 27px;
+      }
+    }
+    &_tophies {
+      h6 {
+        color: var(--base-black);
+        font-weight: 700;
+        margin-bottom: 15px;
+        @include mobile() {
+          padding: 0 16px;
+        }
+      }
+      &-column {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        @include mobile() {
+          padding: 0 16px;
+          flex-direction: column;
+          margin-bottom: 16px;
+        }
+        &-item {
+          width: 50%;
+          @include mobile() {
+            width: 100%;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+}

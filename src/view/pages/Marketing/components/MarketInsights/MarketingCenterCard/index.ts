@@ -1,0 +1,1 @@
+export { MarketingCenterCard } from './MarketingCenterCard';

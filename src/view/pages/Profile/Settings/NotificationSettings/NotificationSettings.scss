@@ -1,0 +1,32 @@
+@import "src/assets/styles/mixins";
+
+.notification__settings {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.444;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.285;
+    color: var(--text-secondary);
+
+    @include mobile() {
+      width: 85%;
+    }
+  }
+
+  &__options {
+    margin-top: 3.2rem;
+    margin-bottom: 4rem;
+  }
+}

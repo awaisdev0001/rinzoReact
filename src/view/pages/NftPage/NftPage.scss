@@ -1,0 +1,127 @@
+@import "src/assets/styles/mixins.scss";
+.nft-page {
+  &__table {
+    padding: 40px 0;
+    background-color: var(--base-background--01);
+    // box-shadow: 0px 4px 100px rgba(202, 202, 202, 0.2);
+    @include tablet() {
+      padding: 20px 0 0;
+    }
+    @include mobile() {
+      padding: 28px 0;
+    }
+    &_title {
+      color: var(--text-primary);
+      margin-bottom: 24px;
+      @include tablet() {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__info {
+    padding: 60px 0;
+    @include tablet() {
+      padding: 28px 0 16px;
+    }
+    &_content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &_left,
+      &_right {
+        width: calc((100% - 20px) / 2);
+        @include mobile() {
+          width: 100%;
+        }
+      }
+      &_right {
+        margin-left: 20px;
+        padding: 20px 0 0 20px;
+        @include tablet() {
+          padding: 0;
+        }
+        @include mobile() {
+          margin: 28px 0 0;
+        }
+      }
+    }
+    &_statistics {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--base-background--08);
+      border: 1px solid var(--base-border);
+      //box-shadow: 0px 29px 50px -30px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      padding: 3px 0 20px;
+      margin-bottom: 24px;
+      @include tablet() {
+        padding: 5px 7px 20px;
+        margin-bottom: 20px;
+      }
+    }
+    &_description {
+      margin-bottom: 24px;
+      @include tablet() {
+        margin-bottom: 12px;
+      }
+      @include mobile() {
+        margin-bottom: 20px;
+      }
+      &-title {
+        color: var(--text-primary);
+        margin-bottom: 16px;
+      }
+      &-text {
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          color: var(--text-secondary);
+          a {
+            font-weight: 500;
+            color: var(--text-primary);
+            &:hover {
+              color: var(--primary-green);
+            }
+          }
+        }
+      }
+      &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 8px;
+      }
+    }
+  }
+  &__activity {
+    padding: 21px 0 36px;
+    background-color: var(--base-background--01);
+    // box-shadow: 0px 4px 100px rgba(202, 202, 202, 0.2);
+    @include tablet() {
+      padding: 16px 0 40px;
+    }
+    &_content {
+      &-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 8px;
+        @include tablet() {
+        }
+      }
+    }
+  }
+  &__more-similar {
+    padding: 60px 0 45px;
+    @include tablet() {
+      padding: 28px 0 0;
+    }
+    &_title {
+      color: var(--text-primary);
+      margin-bottom: 24px;
+      @include tablet() {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

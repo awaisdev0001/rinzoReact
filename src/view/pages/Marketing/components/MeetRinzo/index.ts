@@ -1,0 +1,1 @@
+export { MeetRinzo } from './MeetRinzo';

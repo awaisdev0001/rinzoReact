@@ -1,0 +1,1 @@
+export { DogIcon } from './DogIcon';

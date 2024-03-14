@@ -1,0 +1,123 @@
+@import "src/assets/styles/mixins";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 13rem;
+  background: var(--base-background--00);
+  margin: auto 0 0;
+  @include desktop {
+    padding: 3rem 5rem;
+  }
+  @include middleTablet {
+    padding: 2.5rem 3rem;
+  }
+  @include tablet() {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 19px 16px;
+  }
+  &__left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet() {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 23px;
+    }
+  }
+  &__right {
+    flex: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet() {
+      width: 100%;
+    }
+    &-part {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include tablet() {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.33;
+      color: var(--text-tertiary);
+      margin: 0 auto 0 0;
+      @include tablet() {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    &:last-of-type {
+      margin-left: 4px;
+      @include tablet() {
+        margin-left: 0;
+      }
+    }
+    &_item {
+      &-link {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.33;
+        color: var(--text-secondary);
+        margin-right: 16px;
+        cursor: pointer;
+        &:hover {
+          color: var(--primary-green);
+        }
+      }
+      &-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin-left: 12px;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &--violet {
+          background: rgba(88, 102, 242, 0.2);
+          margin-left: 0;
+          &:hover {
+            background: rgba(88, 102, 242, 0.3);
+          }
+        }
+        &--blue {
+          background: rgba(30, 161, 241, 0.2);
+          &:hover {
+            background: rgba(30, 161, 241, 0.3);
+          }
+        }
+      }
+    }
+    &_main {
+      display: flex;
+      &_item {
+        &-link {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.33;
+          color: var(--text-primary);
+          margin-right: 3.2rem;
+          &:hover {
+            color: var(--primary-green);
+          }
+        }
+      }
+    }
+  }
+}

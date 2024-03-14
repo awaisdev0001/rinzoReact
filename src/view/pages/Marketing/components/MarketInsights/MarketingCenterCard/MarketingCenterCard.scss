@@ -1,0 +1,39 @@
+@import "src/assets/styles/mixins";
+
+.marketing-center__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #d6e892;
+  border-radius: 16px;
+  height: 40.4rem;
+  width: calc((100% - 32px) / 3);
+
+  &.none__border {
+    border: 1px solid #efeff4;
+  }
+
+  @include tablet() {
+    height: 20.6rem;
+  }
+
+  @include mobile() {
+    width: 100%;
+  }
+
+  svg {
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 3.444;
+    color: #222222;
+    //margin-bottom: 54px;
+    //white-space: nowrap;
+  }
+}

@@ -1,0 +1,64 @@
+@import "src/assets/styles/variables";
+
+.multiLevel {
+  &__title {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--text-secondary);
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  svg {
+    fill: var(--icons-active);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &__range__divLine-wrap {
+    margin-top: 1.6rem;
+  }
+
+  &__collapse__singleLevel-wrap {
+    display: flex;
+    align-items: center;
+
+    .MuiListItem-button {
+      margin-top: 24px !important;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    position: relative;
+    margin: 16px 0px 0px 0px;
+
+    svg {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 12px;
+      left: 12px;
+      fill: var(--text-secondary);
+    }
+
+    input {
+      width: 100%;
+      border-radius: 12px;
+      border: 2px solid rgb(229, 232, 235);
+      color: var(--text-secondary);
+      width: 100%;
+      padding: 12px 12px 12px 44px;
+      height: 48px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+}

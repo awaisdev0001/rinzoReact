@@ -1,0 +1,1 @@
+export { NftActivityTable } from './NftActivityTable';

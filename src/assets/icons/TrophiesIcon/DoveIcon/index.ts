@@ -1,0 +1,1 @@
+export { DoveIcon } from './DoveIcon';

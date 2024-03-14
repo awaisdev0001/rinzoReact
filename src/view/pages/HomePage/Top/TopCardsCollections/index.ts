@@ -1,0 +1,1 @@
+export { TopCardsCollections } from './TopCardsCollections';

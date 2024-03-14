@@ -1,0 +1,1 @@
+export { IconSweeps } from './IconSweeps';

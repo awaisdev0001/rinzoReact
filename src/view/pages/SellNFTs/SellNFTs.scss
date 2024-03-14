@@ -1,0 +1,130 @@
+@import "src/assets/styles/mixins.scss";
+.send-page {
+  padding-top: 40px;
+  @include tablet() {
+    padding-top: 16px;
+  }
+  &__noconnected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      color: var(--text-primary);
+      margin: 25px 0;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    @include tablet() {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+  }
+  &__subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 19px;
+    @include tablet() {
+      margin-bottom: 16px;
+    }
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 50px;
+    @include tablet() {
+      padding: 0;
+    }
+    &--big {
+      padding: 0 50px;
+      @include tablet() {
+        padding: 0;
+      }
+    }
+    &_left {
+      flex: 1;
+      padding-right: 40px;
+      @include tablet() {
+        padding-right: 0;
+      }
+    }
+    &_right {
+      width: 296px;
+      padding-top: 15px;
+      @include tablet() {
+        display: none;
+      }
+    }
+    &_tablet {
+      display: none;
+      @include tablet() {
+        display: block;
+      }
+    }
+    &_cards {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 6px;
+      width: calc(100% + 10px);
+      margin-left: -5px;
+      margin-bottom: 70px;
+      @include tablet() {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 8px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &_cart {
+      width: 296px;
+      position: absolute;
+      right: -100vw;
+      top: 15px;
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      z-index: 9;
+      &--open {
+        right: 16px;
+      }
+      @include tablet() {
+        width: 100%;
+        position: fixed;
+        right: 0;
+        top: initial;
+        bottom: -100vh;
+        &--open {
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    &_actions {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      justify-content: center;
+      background-color: var(--base-background--08);
+      border-top: 1px solid var(--base-border);
+      padding: 16px;
+      z-index: 99;
+      @include tablet() {
+        display: flex;
+      }
+      .button {
+        max-width: 50%;
+      }
+      @include mobile() {
+        .button {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

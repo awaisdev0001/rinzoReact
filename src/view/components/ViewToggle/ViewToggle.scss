@@ -1,0 +1,78 @@
+@import "src/assets/styles/_variables";
+@import "src/assets/styles//mixins";
+
+.view-toggle {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--base-border);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--base-background--08);
+  box-sizing: content-box;
+  margin-left: 1.6rem;
+  @include tablet() {
+    display: none;
+    &--mobile {
+      display: flex;
+      background: transparent;
+      border-color: transparent;
+      padding: 0;
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 6px;
+    svg {
+      fill: var(--text-tertiary);
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &--active,
+    &:hover {
+      svg {
+        fill: var(--text-primary);
+      }
+    }
+  }
+}
+
+.view-toggle-mobile {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: none;
+  @include tablet() {
+    display: block;
+    &--hidden {
+      display: none;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    opacity: 0;
+    visibility: hidden;
+    svg {
+      fill: var(--icons-active);
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &:hover {
+      svg {
+        fill: var(--text-primary);
+      }
+    }
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

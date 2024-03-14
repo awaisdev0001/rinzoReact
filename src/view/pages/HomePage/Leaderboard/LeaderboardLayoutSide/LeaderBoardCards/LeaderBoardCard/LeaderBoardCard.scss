@@ -1,0 +1,174 @@
+@import 'src/assets/styles/variables';
+@import "src/assets/styles/mixins";
+
+.leaderboard__card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem;
+  background: var(--base-background--08);
+  border: 1px solid var(--base-border);
+  // min-width: 24.5rem;
+  // max-width: 28.3rem;
+  width: calc((100% - 80px) / 5);
+  margin: 0 8px 16px;
+  padding: 1.6rem;
+
+  @include desktopLarge(){
+    width: calc((100% - 64px) / 4);
+  }
+  @include tabletMini(){
+    width: calc((100% - 32px) / 2);
+    padding: 28px;
+    margin: 0 8px 28px;
+  }
+  @include mobile(){
+    width: 100%;
+  }
+
+  &-innerContainer {
+    display: flex;
+    flex-direction: column;
+
+    &-upperSide {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: 2px solid var(--base-border);
+      padding-bottom: 1.6rem;
+
+      .leaderboard__card__numberCycle_and_image {
+        display: flex;
+        align-items: center;
+        margin-right: 3.8rem;
+        position: relative;
+
+        .leaderboard__card__numberCycle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--fields-disable);
+          border-radius: 50%;
+          width: 3.6rem;
+          height: 3.6rem;
+          z-index: 1;
+
+          &-par {
+            font-family: $primaryFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.375;
+            color: var(--base-black);
+          }
+        }
+
+        .leaderboard__card-thumb {
+          position: absolute;
+          left: 2.7rem;
+        }
+
+      }
+
+      .leaderboard__card__walletAddress {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover{
+          svg{
+            opacity: 0.7;
+          }
+        }
+
+        &-par {
+          font-family: $primaryFont;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 1.285;
+          color: var(--text-primary);
+          margin-right: 10px;
+
+          position: relative;
+          &:after {
+              content:'';
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: -4px;
+              left: 0;
+              background-color: var(--text-primary);
+              transform: scaleX(0);
+              transform-origin: bottom right;
+              transition: transform 0.3s;
+          }
+          &:hover {
+            &:after {
+                transform-origin: bottom left;
+                transform: scaleX(1);
+            }
+        }
+        }
+        &-etherscan{
+          svg{
+            fill: var(--icons-inactive);
+                    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          }
+          &:hover {
+            svg{
+              fill: var(--icons-active);
+            }
+          }
+        }
+      }
+    }
+
+    &-dataTable {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.8rem;
+      @include tabletMini(){
+        margin-top: 16px;
+      }
+
+      .leaderboard__card__dataTable-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+        @include tabletMini(){
+          margin-bottom: 12px;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        &-title {
+          font-family: $primaryFont;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.4rem;
+          line-height: 1.285;
+          color: var(--text-tertiary);
+        }
+
+        &-price {
+          display: flex;
+          align-items: center;
+          font-family: $primaryFont;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 1.375;
+          color: var(--text-primary);
+
+          span {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "src/assets/styles/mixins";
+
+.marketing__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 70px;
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.286;
+    white-space: nowrap;
+    padding: 15px 20px 15px 16px;
+    background: transparent;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    &:hover {
+      background: rgba($color: #d6e892, $alpha: 0.5);
+    }
+
+    @include tablet() {
+      &:hover {
+        background: transparent;
+      }
+    }
+    &--active {
+      background: #d6e892;
+      &:hover {
+        background: rgba($color: #d6e892, $alpha: 1);
+      }
+    }
+  }
+}
+
+.marketing__menu__mobile {
+  display: flex;
+  overflow-y: scroll;
+  scrollbar-color: transparent;
+
+  // chrome, safari
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    outline: 0px solid transparent;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.286;
+    white-space: nowrap;
+    padding: 15px 20px 15px 16px;
+    background: transparent;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    //&:hover {
+    //  background: rgba($color: #D6E892, $alpha: 0.5);
+    //}
+    &--active {
+      background: #d6e892;
+      //&:hover {
+      //  background: rgba($color: #D6E892, $alpha: 1);
+      //}
+    }
+  }
+
+  .marketing__menu {
+    &__option {
+      min-width: 180px;
+      margin-bottom: 0;
+      margin-right: 16px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

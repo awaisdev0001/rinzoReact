@@ -1,0 +1,17 @@
+@import "src/assets/styles/mixins";
+
+.menu__side__bar {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  padding: 40px 28px 0 71px;
+
+  &__logo {
+    height: 67px;
+
+    img {
+      height: 100%;
+    }
+  }
+}

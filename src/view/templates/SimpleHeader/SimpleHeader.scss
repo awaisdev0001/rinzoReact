@@ -1,0 +1,76 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.simple__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem 0 4rem;
+  height: 75px;
+  width: 100vw;
+  background-color: var(--base-background--08);
+  z-index: 9;
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: var(--base-border);
+    box-shadow: 0px 4px 100px rgba(202, 202, 202, 0.2);
+  }
+  @include desktop {
+    padding: 0 3rem;
+  }
+
+  @include tablet {
+    padding: 0 16px;
+  }
+  @include mobile {
+    height: 72px;
+  }
+  &__left {
+    width: 100%;
+  }
+  &__right {
+    &-wrap {
+      display: flex;
+      align-items: center;
+      margin-right: 6px;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      &-par {
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 1.714;
+        text-align: center;
+        color: var(--text-primary);
+        white-space: nowrap;
+        margin-left: 8px;
+      }
+    }
+  }
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-right: 3.2rem;
+    img {
+      width: 14rem;
+      min-width: 14rem;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "src/assets/styles/mixins.scss";
+
+.hero-info {
+  padding: 4.8rem;
+  min-height: 358px;
+  background: #ffffff;
+  box-shadow: 0px 29px 50px -30px rgba(35, 80, 122, 0.15);
+  border-radius: 24px;
+  @include tablet() {
+    padding: 28px;
+    min-height: 312px;
+  }
+  @include mobile() {
+    min-height: auto;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    &--green {
+      background: #adca5c;
+    }
+    &--red {
+      background: #ff7676;
+    }
+    &--blue {
+      background: #4891f0;
+    }
+    &--yellow {
+      background: #fdb022;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #222222;
+    margin-bottom: 16px;
+    @include tablet() {
+      margin-bottom: 20px;
+    }
+  }
+  &__desc {
+    font-size: 16px;
+    line-height: 1.375;
+    color: #667085;
+    @include mobile() {
+      margin-bottom: 25px;
+    }
+  }
+  &__list {
+    &_item {
+      position: relative;
+      font-size: 16px;
+      line-height: 1.375;
+      color: #667085;
+      margin-bottom: 12px;
+      padding-left: 16px;
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, 0);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #adca5c;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

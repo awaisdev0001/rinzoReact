@@ -1,0 +1,18 @@
+@import "src/assets/styles/mixins";
+
+.top__card__collections-container {
+  display: flex;
+  flex-wrap: wrap;
+  //gap: 16px;
+  margin-bottom: 10rem;
+  width: calc(100% + 16px);
+  margin-left: -8px;
+  @include tablet() {
+    width: 100%;
+    margin-left: 0;
+    padding: 16px 8px;
+  }
+  @include mobile() {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,70 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.checkout__page__subtotal {
+  padding: 23px 24px;
+  box-shadow: 0 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  border: 1px solid var(--base-border);
+  width: 58rem;
+  background: var(--base-background--08);
+
+  @include middleTablet() {
+    width: 100%;
+  }
+
+  @include mobile() {
+    width: 100%;
+    border: none;
+  }
+
+  &-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.285;
+      color: var(--text-primary);
+    }
+
+    &-price {
+      display: flex;
+      flex-direction: column;
+
+      &-eth {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-num {
+          font-family: $primaryFont;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 1;
+          color: var(--text-primary);
+
+          @include mobile() {
+            font-size: 1.5rem;
+            line-height: 1.7;
+          }
+        }
+      }
+
+      &-par {
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.333;
+        text-align: right;
+        color: var(--text-tertiary);
+      }
+    }
+  }
+}

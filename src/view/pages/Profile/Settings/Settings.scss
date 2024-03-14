@@ -1,0 +1,27 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.settings__container {
+  width: 100%;
+  padding: 0 43rem;
+  margin: 4rem auto;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  .settings__title {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin-bottom: 4rem;
+  }
+
+  @include middleTablet() {
+    padding: 0 14rem;
+  }
+
+  @include mobile() {
+    padding: 0 16px;
+  }
+}

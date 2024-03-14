@@ -1,0 +1,278 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.custom__table__cart {
+  border: 1px solid var(--base-border);
+  box-shadow: 0 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem;
+  padding: 1.3rem 1.6rem;
+  max-width: 84.8rem;
+  height: fit-content;
+  width: 100%;
+
+  @include middleTablet() {
+    max-width: 100%;
+    margin-bottom: 2.8rem;
+  }
+
+  @include mobile() {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px 16px;
+
+    @include tabletMini() {
+      border-spacing: 0 16px;
+    }
+
+    &-head {
+      &-tr {
+        .my__cart__middle__head {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.333;
+          display: flex;
+          align-items: center;
+          color: var(--text-primary);
+          white-space: nowrap;
+
+          &-icon {
+            margin-left: 4px;
+            width: 1.6rem;
+            height: 1.6rem;
+
+            path:not(.black) {
+              fill: var(--text-disable);
+            }
+          }
+        }
+
+        th {
+          padding: 0.5rem;
+          text-align: left;
+
+          &:first-child {
+            font-family: $titleFont;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 1.333;
+            color: var(--text-primary);
+          }
+
+          &:last-child {
+            text-align: right;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.285;
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+
+    &-body {
+      tr {
+        margin-bottom: 1.6rem;
+
+        td {
+          padding: 0.5rem;
+          text-align: left;
+          vertical-align: middle;
+
+          &:first-child {
+            align-items: center;
+
+            .custom__table__cart__nft-thumb {
+              width: 5.2rem;
+              height: 5.2rem;
+              margin-right: 8px;
+            }
+
+            .custom__table__cart__nft__info {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+
+              &__number {
+                font-family: $primaryFont;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.285;
+                color: var(--text-primary);
+
+                @include mobile() {
+                }
+              }
+
+              &__title {
+                font-family: $primaryFont;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.333;
+                color: var(--text-secondary);
+
+                @include mobile() {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  width: 6.9rem;
+                }
+              }
+            }
+          }
+        }
+
+        .custom__table__cart__estimated__body {
+          max-width: 14.6rem;
+        }
+
+        .custom__table__cart__token__num {
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.333;
+            color: var(--text-secondary);
+          }
+        }
+
+        .custom__table__cart__middle__body {
+          &__input {
+            //background: var(--main-element-bg);
+            //padding: 10px 12px;
+            //border: 1px solid var(--fields-inactive);
+            //border-radius: 8px;
+            //font-style: normal;
+            //font-weight: 400;
+            //font-size: 12px;
+            //line-height: 16px;
+            //color: var(--text-secondary);
+            width: 10.4rem;
+
+            &:focus {
+              border-color: var(--text-accent);
+            }
+
+            &::placeholder {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              color: var(--text-secondary);
+            }
+          }
+        }
+
+        .custom__table__cart__nft__price__eth {
+          text-align: right;
+
+          .custom__table__cart__nft__price {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.375;
+            color: var(--text-primary);
+
+            span {
+              margin-left: 8px;
+            }
+
+            @include miniMobile() {
+              display: flex;
+              align-items: center;
+            }
+          }
+
+          .custom__table__cart__nft__price_dollars {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.333;
+            text-align: right;
+            color: var(--text-tertiary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom__table__cart__estimated {
+  display: flex;
+  flex-direction: column;
+  background: var(--base-green-background);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  &--dark {
+    border-color: var(--base-green-background);
+    background-color: var(--base-background--08);
+  }
+
+  @include middleTablet() {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 8px 1rem;
+    justify-content: center;
+  }
+
+  h5 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.333;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.333;
+    color: var(--text-primary);
+
+    .estimated__column__eth {
+      margin-left: 2px;
+      margin-right: 5px;
+
+      @include middleTablet() {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    .estimated__column__percent {
+      color: var(--text-accent);
+      margin-left: 4px;
+
+      @include middleTablet() {
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.custom__table__cart__cancel {
+  //background: var(--alerts-pink);
+  //border-radius: 50%;
+  //
+  //svg{
+  //  fill: var(--icons-active);
+  //}
+}

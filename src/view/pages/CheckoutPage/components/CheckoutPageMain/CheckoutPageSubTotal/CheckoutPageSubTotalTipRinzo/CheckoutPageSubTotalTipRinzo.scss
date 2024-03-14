@@ -1,0 +1,74 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.checkout__page__subtotal__tip__rinzo {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 0;
+
+  &-title {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--text-primary);
+  }
+
+  .checkout__page__subtotal__tip__rinzo-percentages {
+    display: flex;
+    margin-top: 1rem;
+
+    &-left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @include middleTablet() {
+        gap: 8px;
+      }
+
+      .checkout__page__subtotal__short {
+        display: flex;
+        align-items: center;
+        //margin-left: 1.5rem;
+
+        &-par {
+          font-family: $primaryFont;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.333;
+          color: var(--text-secondary);
+          margin-right: 8px;
+        }
+
+        &-input {
+          background: var(--main-element-bg);
+          padding: 10px 12px;
+          border: 1px solid #d0d5dd;
+          border-radius: 8px;
+          font-family: $primaryFont;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--text-secondary);
+          width: 6.9rem;
+          &:focus {
+            border-color: var(--text-accent);
+          }
+
+          &::placeholder {
+            font-family: $primaryFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: var(--text-secondary);
+          }
+        }
+      }
+    }
+  }
+}

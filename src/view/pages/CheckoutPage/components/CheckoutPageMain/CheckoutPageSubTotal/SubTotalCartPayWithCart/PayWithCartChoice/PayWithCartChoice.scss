@@ -1,0 +1,57 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.pay__with__cart__choice {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  box-shadow: 0 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 1.6rem;
+  border: 1px solid var(--base-border);
+  width: calc((100% - 36px) / 3);
+  margin: 0 6px 16px;
+  cursor: pointer;
+  @include tablet() {
+    width: calc((100% - 24px) / 3);
+    margin: 0 4px 31px;
+  }
+
+  &:hover {
+    border: 1px solid var(--primary-green);
+  }
+
+  @include mobile() {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  &__token-title {
+    display: flex;
+    align-items: center;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 1.575;
+    color: var(--text-primary);
+    margin-bottom: 9px;
+  }
+
+  &-par {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.333;
+    color: var(--text-secondary);
+
+    &-span {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.333;
+      color: var(--text-primary);
+    }
+  }
+}

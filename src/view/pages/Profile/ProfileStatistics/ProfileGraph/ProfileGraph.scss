@@ -1,0 +1,38 @@
+@import "src/assets/styles/mixins";
+
+.profile__graph {
+  width: 100%;
+
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 1.6rem;
+    background: var(--base-background--09);
+    border-radius: 16px;
+    margin-bottom: 1.8rem;
+    margin-top: 3px;
+    width: 100%;
+
+    @include tablet() {
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: 0;
+      border-radius: 0;
+      padding: 16px 16px 18px;
+    }
+  }
+
+  &__chart {
+    display: flex;
+
+    @include middleTablet() {
+      flex-direction: column;
+    }
+
+    &__container {
+      //flex: 1;
+      width: 100%;
+    }
+  }
+}

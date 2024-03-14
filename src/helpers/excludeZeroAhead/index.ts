@@ -1,0 +1,1 @@
+export { excludeZeroAhead } from './excludeZeroAhead';

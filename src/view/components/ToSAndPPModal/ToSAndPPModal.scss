@@ -1,0 +1,45 @@
+@import "src/assets/styles/_variables";
+@import "src/assets/styles/mixins";
+
+.tos-pp-modal-container {
+  .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      height: 36px;
+      padding: 0 16px;
+      border-radius: 2rem;
+      border: 1px solid var(--base-border-black);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+      color: var(--text-primary);
+      margin: 0 6px;
+      white-space: nowrap;
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      @include mobile() {
+        height: 40px;
+        padding: 0 14px;
+      }
+
+      &:hover {
+        border-color: var(--text-disable);
+      }
+      &--active {
+        border-color: var(--text-primary);
+        background-color: var(--text-primary);
+        color: var(--black-btn);
+
+        &:hover {
+          border-color: var(--text-primary);
+        }
+      }
+    }
+  }
+}

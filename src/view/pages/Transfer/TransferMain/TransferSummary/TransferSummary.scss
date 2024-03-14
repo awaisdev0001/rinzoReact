@@ -1,0 +1,109 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.transfer__page__summary {
+  background: var(--base-background--08);
+  border: 1px solid var(--base-border);
+  box-shadow: 0 29px 50px -30px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 308px;
+
+  @include middleTablet() {
+    max-width: 100%;
+  }
+
+  &__title {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--text-primary);
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--base-border);
+    margin-bottom: 30px;
+  }
+
+  &__estimated {
+    display: flex;
+    flex-direction: column;
+
+    @include middleTablet() {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @include mobile() {
+      flex-direction: column;
+    }
+    &__gas {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--base-border);
+
+      @include middleTablet() {
+        flex: 1;
+        margin-bottom: 0;
+        border: none;
+      }
+
+      @include middleTablet() {
+        flex: 1;
+        margin-bottom: 0;
+        border: none;
+        width: 100%;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--base-border);
+      }
+
+      &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.286;
+        color: var(--text-primary);
+      }
+
+      &__price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        span {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 2rem;
+          line-height: 1.5;
+          color: var(--text-primary);
+        }
+
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1.333;
+          color: var(--text-tertiary);
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 16px;
+      @include middleTablet() {
+        flex: 1;
+        margin-bottom: 0;
+        border: none;
+      }
+
+      @include mobile() {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+export const CHANGE_USER_OF_APP = 'CHANGE_USER_OF_APP';
+export const CLEAR_USER_OF_APP = 'CLEAR_USER_OF_APP';
+export const OPEN_WALLET_POP_UP = 'OPEN_WALLET_POP_UP';

@@ -1,0 +1,38 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.homepage__items__list__table {
+  width: calc(100% + 15px);
+  padding-right: 15px;
+  max-height: 37vh;
+  overflow-y: scroll;
+  @include mobile() {
+    max-height: 45vh;
+    padding-right: 0;
+  }
+  @include miniMobile() {
+    max-height: 34vh;
+  }
+}
+
+.modal__table__redirect {
+  fill: var(--icons-active);
+}
+
+.modal__table-par {
+  a {
+    font-family: $primaryFont !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 1.4rem !important;
+    line-height: 1.285 !important;
+    color: var(--text-primary) !important;
+
+    @include mobile() {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      width: 10rem !important;
+    }
+  }
+}

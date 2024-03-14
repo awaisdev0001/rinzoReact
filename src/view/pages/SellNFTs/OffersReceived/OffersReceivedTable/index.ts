@@ -1,0 +1,1 @@
+export { OffersReceivedTable } from './OffersReceivedTable';

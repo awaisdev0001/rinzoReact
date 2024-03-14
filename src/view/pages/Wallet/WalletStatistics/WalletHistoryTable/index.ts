@@ -1,0 +1,1 @@
+export { WalletHistoryTable } from "./WalletHistoryTable";

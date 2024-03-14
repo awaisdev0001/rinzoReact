@@ -1,0 +1,65 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.checkout__page__place__order {
+  width: 48.5%;
+
+  @include tabletMini() {
+    width: 100%;
+    border-bottom: 1px solid var(--base-border);
+    padding-bottom: 2.8rem;
+    margin: 2.8rem 0;
+  }
+
+  &__title {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.333;
+    margin-left: -8px;
+    color: var(--text-primary);
+
+    @include tabletMini() {
+      font-size: 2rem;
+      line-height: 1;
+      margin-left: 4px;
+    }
+  }
+
+  &__orders {
+    position: relative;
+    border-left: 2px solid var(--base-border);
+    margin-top: 16px;
+
+    @include tabletMini() {
+      margin-top: 20px;
+      margin-left: 12px;
+    }
+
+    &-order {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.6rem;
+      z-index: 1;
+      padding-left: 1.3rem;
+      transition: height 0.5s linear;
+
+      &-icon {
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+        background: var(--base-background--01);
+        width: 2.5rem;
+        height: 2.5rem;
+
+        svg {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "src/assets/styles/mixins.scss";
+
+.additon-info {
+  flex: 1;
+  max-height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  @include mobile() {
+    padding: 40px 0;
+  }
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-bottom: 16px;
+    @include tablet() {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  &__title {
+    color: var(--text-primary);
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 1.375;
+    color: var(--text-secondary);
+    height: 22px;
+    margin-top: 8px;
+  }
+}

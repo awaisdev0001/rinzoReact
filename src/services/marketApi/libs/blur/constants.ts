@@ -1,0 +1,2 @@
+export const BLUR_EXCHANGE_ADDRESS = "0x59728544b08ab483533076417fbbb2fd0b17ce3a";
+export const BLUR_MARKET_INDEX = 1;

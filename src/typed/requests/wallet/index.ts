@@ -1,0 +1,1 @@
+export { IWalletProfile } from "./IWallet";

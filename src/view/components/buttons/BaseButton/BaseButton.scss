@@ -1,0 +1,233 @@
+@import "src/assets/styles/mixins";
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  &--s {
+    height: 24px;
+    padding: 0 24px;
+  }
+  &--m {
+    min-width: 16.5rem;
+    height: 34px;
+    padding: 0 24px;
+  }
+  &--outline {
+    font-weight: 500;
+    font-size: 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &-xxs {
+      min-width: 115px;
+      padding: 4px 6px;
+      @include mobile() {
+        font-size: 14px;
+        padding: 4px 0;
+      }
+    }
+    &-sx {
+      min-width: 105px;
+      padding: 4px 16px;
+      font-weight: 700;
+    }
+    &-s {
+      min-width: 144px;
+      height: 38px;
+      padding: 0 12px;
+      font-size: 14px;
+    }
+    &-m {
+      min-width: 157px;
+      height: 34px;
+      padding: 0;
+      font-size: 14px;
+    }
+    &-l {
+      min-width: 200px;
+      height: 38px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    &-xl {
+      height: 40px;
+      padding: 0 2.4rem;
+      font-size: 14px;
+      font-weight: 700;
+      @include tablet() {
+        width: 100%;
+        height: 38px;
+      }
+    }
+    &-xxl {
+      width: 100%;
+      height: 50px;
+      padding: 0 24px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    &-left {
+      justify-content: flex-end;
+    }
+    &-secondary {
+      color: var(--text-secondary);
+      border-color: var(--text-secondary);
+      svg {
+        fill: var(--text-secondary);
+      }
+      &:hover {
+        color: var(--primary-green);
+        border-color: var(--primary-green);
+        svg {
+          fill: var(--primary-green);
+        }
+      }
+    }
+    &-transparent {
+      color: var(--text-secondary);
+      svg {
+        fill: var(--icons-active);
+      }
+      &:disabled {
+        color: var(--text-disable);
+        svg {
+          fill: var(--text-disable);
+        }
+      }
+      &:hover {
+        color: var(--primary-green);
+        svg {
+          fill: var(--primary-green);
+        }
+        &:disabled {
+          color: var(--text-disable);
+          svg {
+            fill: var(--text-disable);
+          }
+        }
+      }
+      &-primary {
+        color: var(--text-primary);
+      }
+    }
+    &-black {
+      border-color: var(--base-black) !important;
+      color: var(--base-black) !important;
+      &:hover,
+      &-active {
+        background-color: var(--base-black) !important;
+        color: var(--text-white) !important;
+        &.dark {
+          border-color: var(--main-element-bg) !important;
+          background-color: var(--main-element-bg) !important;
+        }
+      }
+    }
+    &-grey {
+      color: var(--icons-active);
+      border-color: var(--icons-active);
+      &:hover {
+        color: var(--primary-green);
+        border-color: var(--primary-green);
+      }
+    }
+    &-red {
+      color: var(--primary-red);
+      border-color: var(--primary-red);
+      svg {
+        fill: var(--primary-red);
+      }
+      &:hover {
+        border-color: var(--primary-red);
+        background-color: var(--alerts-pink);
+      }
+    }
+
+    &-green {
+      color: var(--primary-green);
+      border-color: var(--primary-green);
+      svg {
+        fill: var(--primary-green);
+      }
+      &:hover {
+        border-color: var(--primary-green);
+        opacity: 0.5;
+      }
+
+      margin-bottom: 10px;
+    }
+  }
+  &--contained {
+    border-radius: 8px;
+    &-black {
+      background-color: var(--base-black) !important;
+      color: var(--text-white) !important;
+    }
+    &-m {
+      height: 40px;
+      padding: 0 2.4rem;
+    }
+  }
+  &--colored {
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 6px 20px;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &-red {
+      color: var(--primary-red);
+      svg {
+        fill: var(--primary-red);
+      }
+      &:hover {
+        border-color: var(--primary-red);
+      }
+    }
+
+    &-green {
+      color: var(--primary-green);
+      svg {
+        fill: var(--primary-green);
+      }
+      &:hover {
+        border-color: var(--primary-green);
+      }
+    }
+  }
+
+  &--icon {
+    &.button--outline-xxs {
+      svg {
+        width: 12px;
+      }
+    }
+    &-s {
+      svg {
+        margin-left: 4px;
+      }
+    }
+    svg {
+      display: inline-block;
+      margin-left: 8px;
+      path {
+        &.green {
+          fill: var(--primary-green);
+        }
+        &.red {
+          fill: var(--primary-red);
+        }
+      }
+    }
+    &-right {
+      flex-direction: row-reverse;
+      svg {
+        display: inline-block;
+        margin: 0 8px 0 0;
+      }
+      &.button--left {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

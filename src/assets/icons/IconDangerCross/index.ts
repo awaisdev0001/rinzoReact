@@ -1,0 +1,1 @@
+export { IconDangerCross } from './IconDangerCross';

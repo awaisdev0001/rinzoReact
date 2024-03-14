@@ -1,0 +1,71 @@
+@import "src/assets/styles/mixins";
+
+.currency-switcher {
+  position: relative;
+  margin-right: 2.4rem;
+  @include desktop {
+    margin-right: 8px;
+  }
+  @include mobile {
+    margin: 0;
+  }
+  &__toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 118px;
+    background-color: var(--fields-disable);
+    border-radius: 8px;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 58px;
+      transform: translate(0, -50%);
+      min-width: 55px;
+      height: 28px;
+      border-radius: 8px;
+      background-color: var(--base-background--08);
+      transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+      z-index: 1;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 55px;
+    height: 28px;
+    padding: 0 6px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: 2;
+    &--active {
+      color: var(--text-primary);
+    }
+    span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 2px;
+      margin-left: -2px;
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      & + .currency-switcher__toggle {
+        &:after {
+          left: 4px;
+        }
+      }
+    }
+  }
+}

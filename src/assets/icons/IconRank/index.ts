@@ -1,0 +1,1 @@
+export { IconRank } from './IconRank';

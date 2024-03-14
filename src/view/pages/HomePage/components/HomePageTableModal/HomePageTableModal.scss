@@ -1,0 +1,115 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+.sweep__table__modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 55rem;
+  flex: 1;
+
+  &-upper {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet() {
+      flex-direction: column;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      svg {
+        fill: var(--fields-inactive);
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      @include tablet() {
+        margin-top: 16px;
+      }
+      .button {
+        margin-left: 8px;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        @include tablet() {
+          width: calc((100% - 8px) / 2);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__short-wrap {
+    margin-top: 2.8rem;
+
+    &-desc {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.375;
+      color: var(--text-primary);
+      h5 {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1.28;
+        font-weight: 400;
+        color: var(--text-primary);
+        @include tablet() {
+          margin-bottom: 6px;
+          &.tablet-medium {
+            font-weight: 500;
+          }
+        }
+      }
+      @include tablet() {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .sweep__desc_etherIcon {
+        margin: 0 7px;
+        @include tablet() {
+          margin: 0 4px 0 8px;
+        }
+      }
+      .sweep__desc_price {
+        font-size: 16px;
+        line-height: 1.375;
+        font-weight: 500;
+      }
+      .sweep__desc_percent {
+        font-size: 16px;
+        line-height: 1.375;
+        font-weight: 500;
+        color: var(--primary-green);
+        margin: 0 8px;
+      }
+    }
+  }
+}
+
+.sweep__transaction__time {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  color: var(--text-tertiary);
+  margin-right: 2.4rem;
+}
+
+.sweep__transaction__view {
+  margin-right: 8px;
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+}

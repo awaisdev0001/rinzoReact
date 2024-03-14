@@ -1,0 +1,185 @@
+@import "src/assets/styles/mixins";
+.rinzo-swiper {
+  position: relative;
+  &.more-similar {
+    .swiper {
+      padding-bottom: 42px;
+      @include tablet() {
+        .swiper-slide {
+          width: 239px;
+          padding: 0 0 0 16px;
+          &:last-of-type {
+            width: 255px;
+            padding: 0 16px;
+          }
+        }
+      }
+    }
+    @include tablet() {
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        display: none;
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 28%;
+    }
+  }
+  &.rinzo-swiper--small {
+    .swiper {
+      padding-bottom: 28px;
+    }
+
+    @include mobile() {
+      .swiper-slide {
+        width: 100px;
+        padding: 0 0 0 16px;
+        &:last-of-type {
+          width: 116px;
+          padding: 0 16px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        display: none;
+      }
+    }
+  }
+  &.rinzo-swiper--rinzo-avatar {
+    .swiper {
+      padding-bottom: 28px;
+    }
+    @include mobile() {
+      .swiper-slide {
+        width: 116px;
+        padding: 0 0 0 12px;
+        &:last-of-type {
+          width: 128px;
+          padding: 0 12px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        display: none;
+      }
+    }
+  }
+  &.rinzo-swiper--nft-avatar {
+    .swiper {
+      padding-bottom: 28px;
+    }
+    @include mobile() {
+      .swiper-slide {
+        width: 171px;
+        padding: 0 0 0 14px;
+        &:last-of-type {
+          width: 185px;
+          padding: 0 16px;
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        display: none;
+      }
+    }
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: var(--fields-inactive);
+    border: 2px solid var(--fields-inactive);
+    opacity: 1;
+    &-active,
+    &:hover {
+      background-color: var(--main-element-bg);
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: var(--fields-disable);
+    border: 1px solid var(--base-border);
+    border-radius: 50%;
+    &:hover {
+      background: #f4f8e8;
+    }
+    &:after {
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-image: url("../images/arrow-right.svg");
+    }
+    &.swiper-button-disabled {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &--small {
+      top: calc((100% - 28px) / 2);
+    }
+    &--20 {
+      top: calc((100% - 60px) / 2);
+    }
+  }
+  .swiper-button-next {
+    right: -20px;
+  }
+  .swiper-button-prev {
+    transform: rotate(180deg);
+    left: -20px;
+  }
+
+  &--relative-buttons {
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: initial;
+      top: initial;
+      left: initial;
+      right: initial;
+      bottom: initial;
+      margin: 0;
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        visibility: visible;
+      }
+    }
+    .swiper-button-prev {
+      margin-right: 12px;
+    }
+    .swiper-pagination-bullet {
+      background-color: #d0d5dd;
+      border: none;
+      opacity: 1;
+      &-active,
+      &:hover {
+        background-color: #8eb136;
+      }
+    }
+
+    @include tablet() {
+      .swiper-button-next,
+      .swiper-button-prev,
+      .swiper-pagination {
+        display: none;
+      }
+      .swiper-slide {
+        width: 208px;
+        padding: 0 0 0 16px;
+        &:last-of-type {
+          width: 224px;
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+}

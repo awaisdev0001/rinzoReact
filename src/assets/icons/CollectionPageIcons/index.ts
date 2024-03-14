@@ -1,0 +1,1 @@
+export { IconAddToBasket } from './IconAddToBasket';

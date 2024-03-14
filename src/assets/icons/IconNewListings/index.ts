@@ -1,0 +1,1 @@
+export { IconNewListings } from './IconNewListings';

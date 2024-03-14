@@ -1,0 +1,63 @@
+@import "src/assets/styles/mixins.scss";
+.marketplaces-block {
+  max-width: 375px;
+  max-height: 180px;
+  padding-right: 8px;
+  overflow-y: auto;
+  @include tablet() {
+    max-height: 280px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 9px 8px;
+    margin-bottom: 12px;
+    border: 1px solid transparent;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &_left {
+      display: flex;
+      align-items: center;
+      img {
+        width: 16px;
+        height: auto;
+        margin: 0 8px;
+      }
+    }
+    &_title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.33;
+      color: var(--text-secondary);
+    }
+    &_percent {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.33;
+      color: #ff7676;
+    }
+    &:first-of-type {
+      .marketplaces-block__item {
+        &_percent {
+          color: var(--primary-green);
+        }
+      }
+    }
+    &--checked {
+      background-color: var(--base-green-background);
+      &.marketplaces-block__item_dark {
+        background-color: var(--main-element-bg);
+        border-color: var(--base-green-background);
+      }
+      .marketplaces-block__item {
+        &_title {
+          color: var(--text-primary);
+        }
+      }
+    }
+  }
+}

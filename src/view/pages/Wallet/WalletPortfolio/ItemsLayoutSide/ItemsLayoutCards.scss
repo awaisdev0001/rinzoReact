@@ -1,0 +1,6 @@
+@import "src/assets/styles/mixins";
+
+.no-items h5 {
+  font-weight: 400;
+  color: var(--alerts-green);
+}

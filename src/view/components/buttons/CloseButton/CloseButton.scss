@@ -1,0 +1,77 @@
+@import "src/assets/styles/_variables";
+@import "src/assets/styles/mixins";
+
+.icon-close {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 3.2rem;
+  height: 3.2rem;
+  min-width: 3.2rem;
+  min-height: 3.2rem;
+  border-radius: 50% !important;
+  background-color: var(--fields-disable) !important;
+  border: 1px solid var(--base-border) !important;
+  margin-left: 16px !important;
+  .MuiTouchRipple-root {
+    display: none;
+  }
+  svg {
+    fill: var(--text-disable);
+  }
+  &:hover {
+    background-color: var(--base-border) !important;
+    svg {
+      fill: var(--text-secondary);
+    }
+  }
+  &--pink {
+    background-color: var(--alerts-pink) !important;
+    border-color: transparent !important;
+    svg {
+      fill: #667085;
+    }
+  }
+  &--black {
+    background-color: #444444 !important;
+    svg {
+      fill: #ffffff;
+    }
+    &:hover {
+      background-color: #222222;
+      svg {
+        fill: #ffffff;
+      }
+    }
+  }
+  &--big {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &--medium {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &--small {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    svg {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}

@@ -1,0 +1,461 @@
+@import "./mixins";
+.mui-input {
+  input {
+    font-weight: 400;
+    color: var(--input-color);
+    border: 1px solid var(--base-border);
+    background-color: var(--main-element-bg);
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    &:focus {
+      color: var(--input-color);
+      border-color: var(--text-accent);
+      box-shadow: 0px 0px 0px 2px var(--fields-disable);
+    }
+    &::placeholder {
+      opacity: 1;
+      font-weight: 400;
+      color: var(--input-color);
+    }
+  }
+  &--icon {
+    position: relative;
+    width: 100%;
+    input {
+      width: 100%;
+      font-size: 12px;
+      line-height: 1.33;
+      padding: 10px 28px 10px 12px;
+      & + div .icon {
+        width: 16px;
+        height: 16px;
+        fill: var(--icons-active);
+      }
+      &:focus {
+        & + div .icon {
+          fill: var(--icons-active);
+        }
+      }
+      &::placeholder {
+        font-size: 12px;
+        line-height: 1.33;
+      }
+    }
+    &-m {
+      input {
+        padding: 10px 50px 10px 12px;
+      }
+    }
+    &-l {
+      input {
+        padding: 0 65px 0 12px;
+        height: 34px;
+      }
+    }
+    &-double {
+      width: 100%;
+      input {
+        min-width: 100%;
+        width: 100%;
+        height: 36px;
+        padding: 10px 32px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .MuiInputAdornment-positionEnd,
+      .MuiInputAdornment-positionStart {
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        width: 26px;
+        height: 26px;
+        min-width: 26px;
+        min-height: 26px;
+        background: var(--fields-disable);
+        transform: translate(0, -50%);
+        margin: 0;
+        border-radius: 8px;
+        button {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-flex;
+            width: 12px;
+            height: 1.5px;
+            background-color: var(--text-disable);
+            transform: translate(-50%, -50%);
+            border-radius: 0.5px;
+            &:nth-child(2) {
+              transform: translate(-50%, -50%) rotate(90deg);
+            }
+          }
+        }
+        &:hover {
+          background: var(--base-border);
+          button span {
+            background-color: var(-text-secondary);
+          }
+        }
+      }
+      .MuiInputAdornment-positionEnd {
+        left: initial;
+        right: 4px;
+      }
+    }
+  }
+  &--simple {
+    @include tablet() {
+      width: 100%;
+    }
+    input {
+      width: 28.5rem;
+      height: auto;
+      max-width: 30rem;
+      font-size: 14px;
+      line-height: 1.28;
+      padding: 10px 12px;
+      &::placeholder {
+        font-size: 14px;
+        line-height: 1.28;
+      }
+      @include tablet() {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    &-flexible {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+    }
+    &-s {
+      width: 100%;
+    }
+    &-xs {
+      input {
+        width: 25px;
+        padding: 10px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.28;
+        @include middleTablet() {
+          width: 90px;
+        }
+      }
+    }
+  }
+}
+.mui-button {
+  max-width: 40rem !important;
+  min-width: 15.4rem !important;
+  text-transform: capitalize !important;
+  padding: 8px 24px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+  white-space: nowrap !important;
+  border-radius: 8px !important;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  .MuiTouchRipple-root {
+    display: none;
+  }
+  &--none-transform {
+    text-transform: none !important;
+  }
+  &--xs {
+    min-width: 88px !important;
+    font-size: 12px !important;
+    height: 34px;
+    @include tablet() {
+      min-width: 78px !important;
+      padding: 8px 18px !important;
+      font-weight: 500 !important;
+    }
+    @include mobile() {
+      width: 100%;
+    }
+  }
+  &--s {
+    height: 38px;
+  }
+  &--m {
+    height: 44px;
+  }
+  &--l {
+    height: 50px;
+  }
+  &--fulwidth {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: auto !important;
+  }
+  &--width-50 {
+    max-width: 50% !important;
+    width: 48% !important;
+    min-width: auto !important;
+    margin: 2px !important;
+  }
+  &--outline {
+    border: 1px solid transparent !important;
+    &-red {
+      border-color: var(--primary-red) !important;
+      color: var(--primary-red) !important;
+      svg {
+        fill: var(--primary-red);
+      }
+      svg path {
+        stroke: var(--primary-red);
+      }
+      &:hover {
+        background-color: var(--alerts-pink) !important;
+      }
+    }
+    &-primary {
+      border-color: var(--fields-inactive) !important;
+      color: var(--text-primary) !important;
+      svg {
+        fill: var(--text-primary);
+      }
+      svg path {
+        stroke: var(--text-primary);
+      }
+      &:hover {
+        background-color: var(--main-element-bg) !important;
+      }
+    }
+    &-green {
+      border-color: var(--primary-green) !important;
+      color: var(--primary-green) !important;
+      &:hover {
+        border-color: var(--text-accent) !important;
+        color: var(--text-accent) !important;
+      }
+      &:disabled,
+      &:disabled:hover {
+        border-color: var(--fields-inactive) !important;
+        color: var(--fields-inactive) !important;
+      }
+    }
+    &-secondary {
+      border-color: var(--icons-active) !important;
+      color: var(--icons-active) !important;
+      &:hover {
+        border-color: var(--text-accent) !important;
+        color: var(--text-accent) !important;
+      }
+    }
+  }
+  &--contained {
+    &-green {
+      background-color: var(--text-accent) !important;
+      color: var(--text-white) !important;
+      &-medium {
+        background-color: var(--primary-green) !important;
+        color: var(--black-btn) !important;
+        &:hover {
+          background-color: var(--text-accent) !important;
+        }
+      }
+      &:disabled {
+        background-color: var(--fields-disable) !important;
+        color: var(--text-disable) !important;
+      }
+    }
+    &-blue {
+      background-color: var(--fields-disable) !important;
+      color: var(--text-disable) !important;
+    }
+    &-black {
+      background-color: var(--base-black) !important;
+      color: var(--text-white) !important;
+      svg {
+        fill: var(--text-white);
+      }
+      &:hover {
+        background-color: var(--primary-green) !important;
+      }
+      &-dark {
+        background-color: var(--black-btn) !important;
+        &:hover {
+          background-color: var(--text-accent) !important;
+        }
+      }
+    }
+  }
+}
+
+.mui-table {
+  max-width: 100vw;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  margin-bottom: 4rem !important;
+  overflow: initial !important;
+  &-without-margin {
+    margin-bottom: 0 !important;
+  }
+  &-small-margin {
+    margin-bottom: 24px !important;
+    @include tablet() {
+      margin-bottom: 12px !important;
+    }
+    @include mobile() {
+      margin-bottom: 16px !important;
+    }
+  }
+  table {
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+  &__th {
+    padding: 1.8rem 4px !important;
+    &--tablet-visible {
+      display: none !important;
+    }
+    @include tablet() {
+      padding: 16px 4px 12px !important;
+      &:first-of-type {
+        padding: 16px 4px 12px 16px !important;
+      }
+      &:last-of-type {
+        padding: 16px 16px 12px 4px !important;
+        .same-padding {
+          padding: 16px 16px 12px 16px !important;
+        }
+      }
+      &--tablet-visible {
+        display: table-cell !important;
+        @include mobile() {
+          display: none !important;
+        }
+      }
+      &--tablet-mobile-visible {
+        display: table-cell !important;
+      }
+
+      &--tablet-hidden {
+        @include tablet() {
+          display: none !important;
+        }
+      }
+      &--mobile-hidden {
+        @include mobile() {
+          display: none !important;
+        }
+      }
+      &--mobile-right {
+        @include mobile() {
+          .table__header_content--left {
+            justify-content: flex-end;
+          }
+        }
+      }
+      &--mobile-visible {
+        display: none !important;
+        @include mobile() {
+          display: table-cell !important;
+        }
+      }
+    }
+    &--mobile-padding {
+      @include mobile() {
+        padding: 16px 6px 12px 12px !important;
+      }
+    }
+  }
+  &--small {
+    &__th {
+      padding: 12px 4px !important;
+      @include tablet() {
+        padding: 12px 4px 12px 0 !important;
+        &:first-of-type,
+        &:last-of-type {
+          padding: 12px 4px 12px 0 !important;
+        }
+        .table__header_content {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.mui-pagination {
+  .MuiPaginationItem-previousNext {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--base-border);
+    background-color: transparent;
+    border-radius: 8px;
+    svg {
+      font-size: 2.5rem;
+      fill: var(--icons-active);
+      transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &:hover {
+      border-color: var(--primary-green);
+      svg {
+        fill: var(--primary-green);
+      }
+    }
+  }
+  .MuiPaginationItem-page {
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.28;
+    text-align: center;
+    color: var(--text-tertiary);
+    width: 34px;
+    height: 34px;
+    &.Mui-selected,
+    &:hover {
+      background-color: transparent !important;
+      border: 1px solid var(--primary-green);
+      color: var(--text-primary);
+    }
+  }
+}
+
+.mui-modal {
+  .MuiBackdrop-root {
+    background-color: rgba(34, 34, 34, 0.25);
+  }
+  &--dark {
+    .MuiBackdrop-root {
+      background-color: rgba(24, 25, 29, 0.8);
+    }
+  }
+}
+
+.mui-input-prefix {
+  position: absolute;
+  right: 12px;
+  span {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 36px;
+    font-size: 14px;
+    line-height: 1.28;
+    color: var(--text-disable);
+  }
+
+  .prefix-par {
+    display: inline-flex;
+    justify-content: flex-end;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.333;
+    color: var(--text-secondary);
+  }
+}

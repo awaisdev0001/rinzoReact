@@ -1,0 +1,22 @@
+export type tCollectionsListResult = {
+  averageSalePriceChangeWei: number;
+  averageSalePriceWei: number;
+  contractAddress: string;
+  floorPriceChangeWei: number;
+  floorPriceWei: number;
+  listings: number;
+  listingsChange: number;
+  name: string;
+  outlook: string;
+  owners: number;
+  ownersChange: number;
+  sales: number;
+  salesChange: number;
+  smartWallets: number;
+  smartWalletsChange: number;
+  timeListedMins: number;
+  timeListedMinsChange: number;
+  totalSupply: number;
+  volume: number;
+  volumeChange: number;
+};

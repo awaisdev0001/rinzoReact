@@ -1,0 +1,1 @@
+export { navigatorCopyText } from './navigatorCopyText';

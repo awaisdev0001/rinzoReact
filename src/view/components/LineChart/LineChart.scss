@@ -1,0 +1,51 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.line__chart {
+  height: 300px;
+
+  @include mobile() {
+    //width: 60rem;
+    //overflow-x: scroll;
+  }
+
+  &__checkboxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.3rem;
+
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      margin-right: 2.7rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &__choice {
+        display: flex;
+        align-items: center;
+        margin-left: 7px;
+        font-family: $primaryFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.286;
+        color: var(--text-secondary);
+        text-decoration: inherit;
+        cursor: pointer;
+        white-space: nowrap;
+
+        input {
+          display: none;
+        }
+
+        input:checked + * {
+          text-decoration: line-through !important;
+        }
+      }
+    }
+  }
+}

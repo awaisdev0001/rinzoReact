@@ -1,0 +1,29 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+@keyframes react-placeholder-pulse {
+  0% {
+    background-position: 100% 0%;
+  }
+  60% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.placeholder-image {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.placeholder-image-loading {
+  background: linear-gradient(90deg, var(--placeholder-dark) 0%, var(--placeholder-gray) 25%, var(--placeholder-dark) 50%, var(--placeholder-gray) 75%, var(--placeholder-dark) 100%);
+  animation: react-placeholder-pulse 2s ease infinite;
+	background-size: 200% 100%;
+}

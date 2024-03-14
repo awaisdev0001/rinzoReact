@@ -1,0 +1,66 @@
+@import "src/assets/styles/mixins.scss";
+.list-block {
+  width: 100%;
+  background: var(--base-background--08);
+  border: 1px solid var(--base-border);
+  border-radius: 16px;
+  padding: 16px 16px 0;
+  @include tablet() {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 16px;
+    &--big {
+      padding: 28px 16px;
+    }
+  }
+  @include mobile() {
+    padding: 28px 16px 12px;
+  }
+  &__title {
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  &__list {
+    &_item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      @include tablet() {
+        align-items: center;
+      }
+      &-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        border-radius: 50%;
+        background-color: var(--fields-disable);
+        border: 1px solid var(--base-border);
+        margin-right: 16px;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+      &-text {
+        font-size: 14px;
+        line-height: 1.285;
+        color: var(--text-secondary);
+      }
+    }
+    &-collumn {
+      @include tablet() {
+        column-count: 2;
+        .list-block__list_item {
+          padding-right: 16px;
+        }
+      }
+      @include mobile() {
+        column-count: 1;
+      }
+    }
+  }
+}

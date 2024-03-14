@@ -1,0 +1,1 @@
+export { IconStartActivity } from './IconStartActivity';

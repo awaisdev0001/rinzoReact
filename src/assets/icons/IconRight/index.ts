@@ -1,0 +1,1 @@
+export { IconRight } from './IconRight';

@@ -1,0 +1,199 @@
+@import "src/assets/styles/mixins";
+.statistics {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__filters {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 29px;
+    &--dark {
+      @include tablet() {
+        position: absolute;
+        top: 1px;
+        right: 16px;
+        transform: translateY(-100%);
+        margin: 0;
+      }
+      @include mobile() {
+        right: 12px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    &--dark {
+      @include tablet() {
+        max-width: 100vw;
+        overflow: hidden;
+        overflow-x: auto;
+        padding: 0 4px;
+        border-top: 1px solid var(--text-accent);
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.12)
+          ),
+          #121212;
+        // firefox
+        scrollbar-color: transparent;
+
+        // chrome, safari
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+          margin: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background-color: transparent;
+          outline: 0px solid transparent;
+        }
+      }
+    }
+
+    &_item {
+      position: relative;
+      padding: 0 29px;
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        content: "";
+        width: 1px;
+        height: 28px;
+        background-color: var(--base-black);
+        @include tablet() {
+          height: 16px;
+        }
+      }
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+      &-title {
+        font-size: 14px;
+        line-height: 1.28;
+        font-weight: 300;
+        color: var(--icons-inactive);
+        text-align: center;
+        letter-spacing: 0;
+        white-space: nowrap;
+        margin-bottom: 7px;
+      }
+      &-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 1.28;
+        font-weight: 500;
+        color: var(--text-white);
+        &-percent {
+          font-size: 12px;
+          line-height: 1.33;
+          font-weight: 500;
+          margin-left: 4px;
+          @include tablet() {
+            margin-left: 6px;
+          }
+        }
+        &-eth {
+          display: flex;
+          align-items: center;
+          margin-right: 4px;
+        }
+        &-arrow {
+          width: 16px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          margin-left: 4px;
+          @include tablet() {
+            width: 14px;
+            height: 14px;
+            margin: 0 0 0 6px;
+            & + .statistics__content_item-info-percent {
+              margin-left: 2px;
+            }
+          }
+          svg {
+            width: 100%;
+          }
+        }
+        &--up {
+          .statistics__content_item-info {
+            &-arrow {
+              svg {
+                fill: var(--primary-green);
+              }
+            }
+            &-percent {
+              color: var(--primary-green);
+            }
+          }
+        }
+        &--down {
+          .statistics__content_item-info {
+            &-arrow {
+              transform: rotate(-180deg);
+              svg {
+                fill: var(--primary-red);
+              }
+            }
+            &-percent {
+              color: var(--primary-red);
+            }
+          }
+        }
+      }
+      &--dark {
+        @include tablet() {
+          display: flex;
+          align-items: center;
+          padding: 12px;
+          .statistics__content_item-title {
+            margin: 0 8px 0 0;
+          }
+        }
+        &:first-of-type {
+          padding: 0 29px 0 0;
+          @include tablet() {
+            padding: 12px;
+          }
+        }
+        &:last-of-type {
+          padding: 0 0 0 29px;
+          @include tablet() {
+            padding: 12px;
+          }
+        }
+      }
+
+      &--light {
+        padding: 0 33px;
+        @include tablet() {
+          padding: 0 20px;
+        }
+        &:after {
+          background-color: var(--base-border);
+        }
+        .statistics__content_item {
+          &-title {
+            color: var(--text-disable);
+          }
+          &-info {
+            color: var(--text-primary);
+          }
+        }
+      }
+    }
+  }
+}

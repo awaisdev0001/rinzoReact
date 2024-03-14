@@ -1,0 +1,28 @@
+@import "src/assets/styles/mixins";
+.button-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fields-disable);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  svg {
+    width: 20px;
+    fill: var(--icons-active);
+  }
+  @include tablet() {
+    width: 32px;
+    height: 32px;
+    svg {
+      width: 16px;
+    }
+  }
+  @include mobile() {
+    background: transparent;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

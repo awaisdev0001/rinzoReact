@@ -1,0 +1,1 @@
+export { IconPopupWallet } from './IconPopupWallet';

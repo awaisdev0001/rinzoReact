@@ -1,0 +1,29 @@
+@import "src/assets/styles/mixins.scss";
+.partners-slider {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    @include tablet() {
+      padding: 0 16px;
+      margin-bottom: 0;
+    }
+    &_title {
+      color: #222222;
+    }
+    &_buttons {
+      display: flex;
+    }
+  }
+  &__item {
+    display: block;
+    padding: 20px 0 58px;
+    @include tablet() {
+      padding: 24px 0;
+    }
+    img {
+      height: 32px;
+    }
+  }
+}

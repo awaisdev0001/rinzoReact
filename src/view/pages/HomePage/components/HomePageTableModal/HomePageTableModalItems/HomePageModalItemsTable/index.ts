@@ -1,0 +1,1 @@
+export { HomePageModalItemsTable } from './HomePageModalItemsTable';

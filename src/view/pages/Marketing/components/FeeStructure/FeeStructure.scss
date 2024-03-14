@@ -1,0 +1,88 @@
+@import "src/assets/styles/mixins.scss";
+.fee-structure {
+  &__info {
+    display: flex;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    @include mobile() {
+      width: 100%;
+      margin-left: 0;
+      flex-wrap: wrap;
+    }
+    &_item {
+      width: calc((100% - 120px) / 3);
+      margin: 0 20px 16px;
+      @include mobile() {
+        width: 100%;
+        margin: 0 0 8px;
+      }
+      &-header {
+        color: #222222;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #d0d5dd;
+        margin-bottom: 20px;
+        @include tablet() {
+          font-size: 16px;
+        }
+        @include mobile() {
+          font-size: 18px;
+          padding-bottom: 12px;
+          margin-bottom: 12px;
+        }
+      }
+      &-list {
+        &-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 24px;
+          @include mobile() {
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 1.285;
+            color: #667085;
+          }
+          span {
+            font-size: 14px;
+            line-height: 1.285;
+            font-weight: 700;
+            color: #222222;
+          }
+          .icon {
+            display: inline-flex;
+            align-items: center;
+            width: 17px;
+            height: 17px;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+  &__notice {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #fbfbfd;
+    border: 1px solid #d0d5dd;
+    border-radius: 16px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.285;
+    color: #667085;
+    margin-bottom: 80px;
+    @include tablet() {
+      margin: 0 22px 80px;
+      padding: 12px;
+    }
+    @include mobile() {
+      margin: 0 0 73px;
+    }
+    img {
+      width: 11px;
+      margin-right: 4px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "src/assets/styles/mixins.scss";
+.account-menu {
+  &__item {
+    padding: 8px;
+    margin-bottom: 4px;
+    @include tablet() {
+      padding: 8px 0;
+      margin-bottom: 16px;
+    }
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1.375;
+      color: var(--text-secondary);
+      @include tablet() {
+        font-size: 16px;
+      }
+      svg {
+        fill: var(--text-secondary);
+      }
+      .icon {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+      }
+      &:hover {
+        color: var(--primary-medium-green);
+        svg {
+          fill: var(--primary-medium-green);
+        }
+      }
+    }
+  }
+  &:last-child {
+    border-top: 1px solid var(--fields-disable);
+    .account-menu__item {
+      margin: 8px 0 0;
+      @include tablet() {
+        margin: 16px 0 15px;
+      }
+      button {
+        color: var(--primary-red);
+        svg {
+          fill: var(--primary-red);
+        }
+        &:hover {
+          color: var(--text-accent);
+          svg {
+            fill: var(--text-accent);
+          }
+        }
+      }
+    }
+  }
+}

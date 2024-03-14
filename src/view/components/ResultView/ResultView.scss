@@ -1,0 +1,101 @@
+@import "src/assets/styles/mixins";
+
+.update-view {
+  margin-right: 2.4rem;
+  @include tablet() {
+    display: flex;
+    align-items: center;
+  }
+  &__status {
+    position: relative;
+    @include tablet() {
+      margin-right: 8px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 1px;
+      text-align: center;
+      white-space: nowrap;
+
+      span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        min-width: 10px;
+        min-height: 10px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+    }
+
+    &_text {
+      @include mobile() {
+        display: none !important;
+      }
+    }
+    &--live {
+      span {
+        background-color: var(--primary-green);
+        animation: pulseGreen 1.5s infinite;
+      }
+    }
+    &--paused {
+      span {
+        background-color: var(--primary-red);
+        animation: pulseRed 1.5s infinite;
+      }
+    }
+  }
+  &__time {
+    display: flex;
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.28;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      &:first-of-type {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: var(--text-secondary);
+      }
+    }
+  }
+}
+
+@keyframes pulseGreen {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(173, 202, 92, 0.6);
+    box-shadow: 0 0 0 0 rgba(173, 202, 92, 0.6);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 7px rgba(173, 202, 92, 0);
+    box-shadow: 0 0 0 7px rgba(173, 202, 92, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(173, 202, 92, 0);
+    box-shadow: 0 0 0 0 rgba(173, 202, 92, 0);
+  }
+}
+@keyframes pulseRed {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 118, 118, 0.6);
+    box-shadow: 0 0 0 0 rgba(255, 118, 118, 0.6);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 7px rgba(255, 118, 118, 0);
+    box-shadow: 0 0 0 7px rgba(255, 118, 118, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 118, 118, 0);
+    box-shadow: 0 0 0 0 rgba(255, 118, 118, 0);
+  }
+}

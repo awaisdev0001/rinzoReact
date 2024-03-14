@@ -1,0 +1,1 @@
+export { SubTotalCartTotalSection } from './SubTotalCartTotalSection';

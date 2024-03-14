@@ -1,0 +1,109 @@
+@import "src/assets/styles/mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem 0 4rem;
+  height: 75px;
+  width: 100vw;
+  background-color: var(--base-background--08);
+  border-bottom: 1px solid var(--base-border);
+  z-index: 10;
+  @include desktop {
+    padding: 0 3rem;
+  }
+  @include middleTablet {
+    display: none;
+  }
+  &__left {
+    width: 100%;
+  }
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 3.2rem;
+    img {
+      width: 28rem;
+      min-width: 7rem;
+      height: auto;
+    }
+    span {
+      font-size: 2em;
+      font-weight: bold;
+      font-family: $logoFont;
+      color: var(--text-primary);
+      letter-spacing: .2em;
+      margin-left: .5em;
+    }
+  }
+  &__nav {
+    margin: 0 7.5rem 0 3rem;
+    @include desktop {
+      margin: 0 2.4rem;
+    }
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+    &_item {
+      position: relative;
+      display: inline-block;
+      padding: 24px 1.6rem 2.7rem;
+      margin: 0 1.6rem;
+      font-size: 1.4rem;
+      line-height: 1.7;
+      font-weight: 600;
+      color: var(--text-primary);
+      @include desktop {
+        margin: 0 8px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-green);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s;
+      }
+      &:hover,
+      &--active {
+        color: var(--primary-green);
+        &:after {
+          transform-origin: bottom left;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  &__popover {
+    padding: 1.6rem;
+    color: var(--text-primary);
+    background-color: var(--base-background--02);
+    font-size: 14px;
+    line-height: 1.28;
+    p {
+      margin-bottom: 1rem;
+    }
+    a {
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--text-primary);
+      &:hover {
+        color: var(--primary-green);
+      }
+    }
+  }
+}

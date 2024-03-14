@@ -1,0 +1,1 @@
+export { CheckoutPagePlaceOrder } from './CheckoutPagePlaceOrder';

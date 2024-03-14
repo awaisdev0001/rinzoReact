@@ -1,0 +1,86 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10rem;
+  padding: 0 12px;
+  height: 23px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &--light {
+    &-sale {
+      background: var(--base-green-background);
+      border-color: var(--primary-medium-green);
+      color: var(--text-accent);
+    }
+    &-cancel,
+    &-cancellation,
+    &-buy {
+      background: var(--alerts-pink);
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+    }
+    &-transfer {
+      background: var(--alerts-lace);
+      border-color: var(--alerts-orange);
+      color: var(--alerts-orange);
+    }
+    &-listing {
+      background: var(--alerts-sky);
+      border-color: var(--alerts-sky-blue);
+      color: var(--alerts-sky-blue);
+    }
+    &-offer {
+      background: var(--alerts-sky);
+      border-color: var(--alerts-sky-blue);
+      color: var(--alerts-sky-blue);
+    }
+    &-mint {
+      background: #f6f6ff;
+      border-color: #6a99f0;
+      color: #6a99f0;
+    }
+  }
+  &--dark {
+    &-sale {
+      background-color: var(--text-accent);
+      border-color: var(--text-accent);
+      color: var(--black-btn);
+    }
+    &-cancel,
+    &-cancellation,
+    &-buy {
+      background-color: var(--alerts-main-pink);
+      border-color: var(--alerts-main-pink);
+      color: var(--black-btn);
+    }
+    &-transfer {
+      background-color: var(--alerts-orange);
+      border-color: var(--alerts-orange);
+      color: var(--black-btn);
+    }
+    &-listing {
+      background: var(--alerts-sky-blue);
+      border-color: #6a99f0;
+      color: var(--black-btn);
+    }
+    &-offer {
+      background: var(--alerts-sky-blue);
+      border-color: #6a99f0;
+      color: var(--black-btn);
+    }
+    &-mint {
+      background: var(--alerts-blue);
+      border-color: var(--alerts-blue);
+      color: var(--black-btn);
+    }
+  }
+  &--big {
+    font-size: 12px;
+  }
+}

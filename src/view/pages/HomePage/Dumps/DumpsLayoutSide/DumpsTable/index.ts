@@ -1,0 +1,1 @@
+export { DumpsTable } from './DumpsTable';

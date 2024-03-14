@@ -1,0 +1,1 @@
+export { GlobalCart } from './GlobalCart';

@@ -1,0 +1,9 @@
+@import 'src/assets/styles/mixins';
+
+.filter__menu__item{
+  margin-top: 18px;
+  @include tablet{
+    margin-top: 16px;
+    padding: 0 8px;
+  }
+}

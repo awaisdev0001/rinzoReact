@@ -1,0 +1,36 @@
+@import "src/assets/styles/mixins";
+
+.top-container {
+  & > .MuiContainer-root {
+    .action-line__filter-mobile {
+      display: none;
+    }
+    @include middleTablet {
+      padding: 0;
+
+      .action-line__filter {
+        display: none;
+      }
+
+      .action-line__filter-mobile {
+        display: block;
+        width: 100%;
+        order: 4;
+
+        @include tablet {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    @include tablet {
+      .action-line__view {
+        margin-bottom: 20px;
+      }
+
+      .action-line__result {
+        opacity: 0;
+      }
+    }
+  }
+}

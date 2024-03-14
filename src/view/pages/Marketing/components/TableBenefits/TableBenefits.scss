@@ -1,0 +1,136 @@
+@import "src/assets/styles/mixins.scss";
+.benefits-table {
+  margin-bottom: 80px;
+  margin-top: 4px;
+  &__header {
+    display: flex;
+    width: 100%;
+    &_item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100% / 3);
+      @include mobile() {
+        padding: 0 12px;
+      }
+      &-image {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 17px;
+        background-size: cover;
+        background-position: center;
+        @include tablet() {
+          margin-bottom: 12px;
+        }
+        @include mobile() {
+          margin-bottom: 8px;
+        }
+        @include miniMobile() {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      &-name {
+        font-size: 16px;
+        color: #222222;
+        text-align: center;
+        @include mobile() {
+          font-size: 14px;
+          line-height: 1.285;
+        }
+        @include miniMobile() {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__table {
+    @include mobile() {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 16px;
+      height: 68px;
+      @include tablet() {
+        padding: 0;
+      }
+      @include mobile() {
+        padding: 0;
+        border-radius: 0;
+        height: 92px;
+      }
+      &:nth-child(odd) {
+        background: #ffffff;
+        border: 1px solid #efeff4;
+        @include mobile() {
+          border-left: none;
+          border-right: none;
+          height: 68px;
+        }
+      }
+      &_left {
+        width: 40%;
+        padding-left: 24px;
+        @include tablet() {
+          width: 45%;
+        }
+        @include mobile() {
+          width: 48%;
+          padding-left: 20px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.285;
+          color: #222;
+        }
+      }
+      &_right {
+        width: 56%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile() {
+          width: 50%;
+          padding-right: 0;
+        }
+        &-icon {
+          width: calc(100% / 3);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            @include mobile() {
+              width: 16px;
+            }
+          }
+        }
+        &-text {
+          max-width: 140px;
+          font-size: 14px;
+          line-height: 1.285;
+          color: #667085;
+          text-align: center;
+          padding: 0 10px 0 18px;
+          &:first-of-type {
+            color: #222;
+          }
+          @include mobile() {
+            font-size: 10px;
+          }
+          @include mobile() {
+            max-width: 68px;
+            padding: 0 0 0 10px;
+            &:nth-child(2) {
+              padding-left: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { RabbitIcon } from './RabbitIcon';

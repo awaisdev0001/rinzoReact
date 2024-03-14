@@ -1,0 +1,1 @@
+export { HomePageTableModalCollections } from './HomePageTableModalCollections';

@@ -1,0 +1,88 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": [
+      "node"
+    ],
+    "incremental": true,
+    "baseUrl": ".",
+   "paths": {
+     "@app/*": [
+       "./src/"
+     ],
+    //  "@rinzo-types/*": [
+    //    "./src/typed/types/*"
+    //  ],
+    //  "@rinzo-types": [
+    //    "./src/typed/types/index"
+    //  ],
+
+    //  "@rinzo-interfaces/*": [
+    //    "./src/typed/interfaces/*"
+    //  ],
+    //  "@rinzo-interfaces": [
+    //    "./src/typed/interfaces/index"
+    //  ],
+
+    //  "@rinzo-icons/*": [
+    //    "./src/icons/*"
+    //  ],
+    //  "@rinzo-icons": [
+    //    "./src/icons/index"
+    //  ],
+
+    //  "@rinzo-helpers/*": [
+    //    "./src/helpers/*"
+    //  ],
+    //  "@rinzo-helpers": [
+    //    "./src/helpers/index"
+    //  ],
+
+    //  "@rinzo-services/*": [
+    //    "./src/services/*"
+    //  ],
+    //  "@rinzo-services": [
+    //    "./src/services/index"
+    //  ],
+
+    //  "@rinzo-templates/*": [
+    //    "./src/templates/*"
+    //  ],
+    //  "@rinzo-templates": [
+    //    "./src/templates/index"
+    //  ],
+
+    //  "@rinzo-layouts/*": [
+    //    "./src/layouts/*"
+    //  ],
+    //  "@rinzo-layouts": [
+    //    "./src/layouts/index"
+    //  ]
+   }
+  },
+
+  "exclude": ["../../node_modules"],
+  "include": [
+    "src",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

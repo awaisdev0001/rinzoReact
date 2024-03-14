@@ -1,0 +1,1 @@
+export { RoundWhaleIcon } from './RoundWhaleIcon';

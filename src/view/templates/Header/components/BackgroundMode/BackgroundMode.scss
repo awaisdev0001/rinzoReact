@@ -1,0 +1,71 @@
+@import "src/assets/styles/mixins";
+
+.background-mode {
+  padding: 5px 2.4rem;
+  margin-right: 2.4rem;
+  border-right: 1px solid var(--base-border);
+  @include middleTablet {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 6rem;
+    background-color: var(--fields-disable);
+    border-radius: 1.8rem;
+    border: 1px solid var(--base-border);
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: calc(50% + 4px);
+      transform: translate(0, -50%);
+      height: 2.24rem;
+      width: 2.24rem;
+      border-radius: 50%;
+      background-color: var(--text-disable);
+      transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+      z-index: 2;
+    }
+  }
+  &__pic {
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.24rem;
+    width: 2.24rem;
+    border-radius: 50%;
+    z-index: 1;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    &:first-of-type {
+      left: 4px;
+    }
+    &:last-of-type {
+      left: calc(50% + 4px);
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      & + .background-mode__toggle {
+        &:after {
+          left: 4px;
+        }
+      }
+    }
+  }
+}

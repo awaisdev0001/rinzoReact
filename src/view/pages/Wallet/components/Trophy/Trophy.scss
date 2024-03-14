@@ -1,0 +1,83 @@
+.trophy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.285;
+    color: var(--text-secondary);
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    &--blue_ronin {
+      background-color: var(--alerts-sky-blue);
+    }
+    &--best_sell {
+      background-color: var(--primary-green);
+    }
+    &--lowest_percent_deal {
+      background-color: var(--base-black);
+    }
+    &--fastest_purchase_offer {
+      background-color: var(--primary-red);
+    }
+  }
+
+  &--small {
+    .trophy {
+      &__img {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &--progress {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    min-width: 84px;
+    min-height: 84px;
+    margin-bottom: 0;
+    position: relative;
+    .trophy {
+      &__img {
+        width: 79px;
+        height: 79px;
+        min-width: 79px;
+        min-height: 79px;
+        margin-right: 0;
+        background-color: var(--fields-disable);
+        z-index: 2;
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      &__border {
+        display: inline-flex;
+        width: 82px;
+        height: 82px;
+        min-width: 82px;
+        min-height: 82px;
+        border-radius: 50%;
+        background-color: var(--base-background--01);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+    }
+  }
+}

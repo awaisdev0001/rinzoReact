@@ -1,0 +1,1 @@
+export { IconTop } from './IconTop';

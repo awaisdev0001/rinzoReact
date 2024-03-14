@@ -1,0 +1,34 @@
+@import 'src/assets/styles/variables';
+@import "src/assets/styles/mixins";
+.subtotal__cart__percentage{
+  width: auto;
+  background-color: var(--base-background--01);
+  border: 1px solid var(--base-border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-weight: 400;
+  font-family: $primaryFont;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-right: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+
+  &:last-of-type{
+    margin-right: 12px;
+    @include tablet (){
+      margin-right: 16px;
+    }
+  }
+  @include tablet (){
+    padding: 7px 27px;
+  }
+}
+
+.clicked-active{
+  background: var(--tip-rinzo);
+  color: var(--text-white);
+  font-weight: 700;
+
+}

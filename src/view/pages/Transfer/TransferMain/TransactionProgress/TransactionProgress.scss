@@ -1,0 +1,31 @@
+@import "src/assets/styles/variables";
+
+.transaction__progress {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  &__title {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.333;
+    color: var(--text-primary);
+    margin-bottom: 17px;
+  }
+
+  &__load {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 1.375;
+      color: var(--text-secondary);
+      margin-left: 13px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "src/assets/styles/mixins";
+
+.marketing-fees {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include mobile() {
+    flex-direction: column;
+  }
+}

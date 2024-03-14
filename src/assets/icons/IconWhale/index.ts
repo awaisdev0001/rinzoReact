@@ -1,0 +1,1 @@
+export { IconWhale } from './IconWhale';

@@ -1,0 +1,1 @@
+export { RinzoAvatar } from './RinzoAvatar';

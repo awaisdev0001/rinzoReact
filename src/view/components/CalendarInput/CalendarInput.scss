@@ -1,0 +1,21 @@
+@import "src/assets/styles/mixins";
+
+.calendar__input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 284px;
+  border: 1px solid var(--base-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--main-element-bg);
+
+  @include tablet() {
+    max-width: 34.4rem;
+  }
+
+  @include mobile() {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+}

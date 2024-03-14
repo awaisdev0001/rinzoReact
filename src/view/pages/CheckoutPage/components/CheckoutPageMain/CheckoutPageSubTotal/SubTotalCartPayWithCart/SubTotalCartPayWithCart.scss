@@ -1,0 +1,55 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.subtotal__cart__pay__with__cart {
+  margin-top: 25px;
+
+  &-title {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.444;
+    color: var(--text-primary);
+  }
+
+  &-choices {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    width: calc(100% + 12px);
+    margin-left: -6px;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &-show__tokens {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    @include tablet() {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    @include mobile() {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &-span {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.285;
+      color: var(--text-secondary);
+      margin-right: 7px;
+    }
+  }
+}

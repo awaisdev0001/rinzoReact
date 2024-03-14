@@ -1,0 +1,8 @@
+@import "src/assets/styles/mixins";
+
+.analytics__blocks {
+  width: calc(100% + 2.4rem);
+  margin-left: -1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+}

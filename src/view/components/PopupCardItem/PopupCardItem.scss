@@ -1,0 +1,46 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixins";
+
+.popup__card__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--base-border);
+  background-color: var(--base-background--08);
+  border-radius: 2rem;
+  padding: 10px 9px;
+  width: calc((100% - 24px) / 3);
+  margin: 0 4px 8px;
+  @include mobile() {
+    width: calc((100% - 40px) / 2);
+    margin: 0 10px 12px;
+    padding: 10px;
+  }
+
+  &-img {
+    display: flex;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 8px;
+  }
+
+  &-cardNumber {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  &-cardTitle {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--text-secondary);
+  }
+}

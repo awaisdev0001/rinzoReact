@@ -1,0 +1,15 @@
+@import "src/assets/styles/variables";
+
+.create-listings__title {
+  border-bottom: 1px solid var(--base-border);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  h1 {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}

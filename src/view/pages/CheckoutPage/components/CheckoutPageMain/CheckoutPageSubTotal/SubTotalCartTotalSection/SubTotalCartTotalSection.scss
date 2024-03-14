@@ -1,0 +1,42 @@
+@import "src/assets/styles/variables";
+.subtotal__cart__total__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-title {
+    font-family: $titleFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+  }
+
+  &-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-ether {
+      color: var(--text-primary);
+
+      span {
+        font-family: $titleFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+    }
+
+    &-dollar {
+      font-family: $primaryFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.333;
+      color: var(--text-tertiary);
+    }
+  }
+}

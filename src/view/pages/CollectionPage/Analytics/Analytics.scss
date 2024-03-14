@@ -1,0 +1,17 @@
+@import "src/assets/styles/mixins";
+
+.analytics__page {
+  margin: 4px 0;
+
+  &__pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    @include mobile() {
+      padding-top: 4rem;
+    }
+  }
+}

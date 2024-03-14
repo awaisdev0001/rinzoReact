@@ -1,0 +1,1 @@
+export { PolarBearIcon } from './PolarBearIcon';

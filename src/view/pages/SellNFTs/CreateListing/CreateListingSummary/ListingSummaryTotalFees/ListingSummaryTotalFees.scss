@@ -1,0 +1,77 @@
+@import "src/assets/styles/mixins.scss";
+.listing-summary-fees {
+  &--bordered {
+    padding-top: 16px;
+    border-top: 1px solid var(--base-border);
+  }
+  @include tablet() {
+    margin: 0 16px;
+  }
+  &_fee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    @include tablet() {
+      margin-bottom: 10px;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.286;
+      color: var(--text-primary);
+
+      svg {
+        fill: #5d5d60;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &_total {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    &-eth {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.375;
+        color: var(--text-primary);
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.375;
+        color: var(--text-primary);
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &-usd {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-size: 12px;
+        line-height: 1.333;
+        color: var(--text-secondary);
+      }
+    }
+  }
+}

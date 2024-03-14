@@ -1,0 +1,1 @@
+export { SimpleLayouts } from './SimpleLayouts';

@@ -1,0 +1,20 @@
+@import "src/assets/styles/mixins";
+
+.notification__setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  &__name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.375;
+    color: var(--text-primary);
+
+    @include mobile() {
+      width: 85%;
+    }
+  }
+}

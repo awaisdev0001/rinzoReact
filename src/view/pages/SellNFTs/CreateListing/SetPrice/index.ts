@@ -1,0 +1,1 @@
+export { SetPrice } from './SetPrice';

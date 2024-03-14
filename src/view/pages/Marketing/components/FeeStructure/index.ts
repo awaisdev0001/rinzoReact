@@ -1,0 +1,1 @@
+export { FeeStructure } from './FeeStructure';

@@ -1,0 +1,1 @@
+export { SamuraiIcon } from './SamuraiIcon';
